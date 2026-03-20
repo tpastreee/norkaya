@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Kaya — Beurre de Mangue Artisanal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-cream: #F7EDE2;
+            --bg-dark: #2B1810;
+            --text-dark: #2B1810;
+            --text-light: #F7EDE2;
+            --accent-warm: #C4956A;
+            --accent-sage: #9DB4A0;
+            --accent-rose: #D4A0A0;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+        /* ============ HERO - PLEIN ECRAN AFFICHE ============ */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-image-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+            transform: scale(0.85);
+            transform-origin: center center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(43, 24, 16, 0.15) 0%,
+                rgba(43, 24, 16, 0.05) 40%,
+                rgba(43, 24, 16, 0.3) 70%,
+                rgba(43, 24, 16, 0.75) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .hero-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 5rem;
+            letter-spacing: 18px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero-sub {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            border: 1.5px solid rgba(247, 237, 226, 0.7);
+            color: var(--text-light);
+            padding: 16px 50px;
+            text-decoration: none;
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .hero-cta:hover {
+            background: var(--text-light);
+            color: var(--text-dark);
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: var(--text-light);
+            opacity: 0.6;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-hint svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ============ SECTION TAGLINE ============ */
+        .tagline-section {
+            padding: 100px 20px;
+            text-align: center;
+            background: var(--bg-cream);
+        }
+
+        .tagline-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 2.4rem;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .tagline-line {
+            width: 60px;
+            height: 1px;
+            background: var(--accent-warm);
+            margin: 30px auto 0;
+        }
+
+        /* ============ SECTION HISTOIRE ============ */
+        .histoire {
+            padding: 80px 20px 100px;
+            background: var(--white);
+        }
+
+        .histoire-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .histoire-label {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-warm);
+            margin-bottom: 20px;
+        }
+
+        .histoire h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .histoire p {
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #6B5B50;
+        }
+
+        .histoire-values {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+            background: var(--bg-cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .value-item h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+
+        .value-item p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #8B7D74;
+            font-weight: 300;
+        }
+
+        /* ============ SECTION BIENFAITS ============ */
+        .bienfaits {
+            padding: 100px 20px;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .bienfaits-label {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-warm);
+            margin-bottom: 15px;
+        }
+
+        .bienfaits h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .bienfaits-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .bienfait-card {
+            padding: 40px 25px;
+            border: 1px solid rgba(247, 237, 226, 0.12);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .bienfait-card:hover {
+            border-color: var(--accent-warm);
+            background: rgba(196, 149, 106, 0.06);
+        }
+
+        .bienfait-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .bienfait-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .bienfait-card p {
+            font-weight: 300;
+            font-size: 0.82rem;
+            line-height: 1.7;
+            opacity: 0.7;
+        }
+
+        /* ============ SECTION PRODUIT ============ */
+        .produit {
+            padding: 100px 20px;
+            background: var(--bg-cream);
+            text-align: center;
+        }
+
+        .produit-label {
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-warm);
+            margin-bottom: 15px;
+        }
+
+        .produit h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .produit-desc {
+            max-width: 550px;
+            margin: 0 auto 50px;
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #6B5B50;
+        }
+
+        .produit-features {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1.5px solid var(--accent-warm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 1.5rem;
+        }
+
+        .feature span {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--bg-cream);
+            color: var(--text-dark);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .footer-label {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-warm);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .footer-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: #C4956A;
+            margin-bottom: 48px;
+        }
+
+        .footer-socials {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 420px;
+            margin: 0 auto 40px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 20px;
+            background: #fff;
+            border: 1px solid rgba(43,24,16,0.08);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent-warm);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(196,149,106,0.12);
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .icon-ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366); }
+        .icon-wa { background: #25D366; }
+        .icon-go { background: #fff; border: 1px solid rgba(43,24,16,0.1); }
+
+        .social-info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .social-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .social-handle {
+            font-size: 12px;
+            color: #9a7a5a;
+            font-weight: 300;
+            margin-top: 1px;
+        }
+
+        .social-arrow {
+            color: var(--accent-warm);
+            font-size: 18px;
+        }
+
+        .footer-copy {
+            font-size: 0.7rem;
+            color: #9a7a5a;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .hero-brand {
+                font-size: 2.8rem;
+                letter-spacing: 10px;
+            }
+
+            .hero-sub {
+                font-size: 0.85rem;
+                letter-spacing: 3px;
+            }
+
+            .hero-content {
+                padding-bottom: 60px;
+            }
+
+            .tagline-text {
+                font-size: 1.6rem;
+            }
+
+            .histoire-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .bienfaits-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                max-width: 350px;
+            }
+
+            .bienfaits h2 {
+                font-size: 1.8rem;
+            }
+
+            .produit-features {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-brand {
+                font-size: 2.2rem;
+                letter-spacing: 8px;
+            }
+
+            .hero-cta {
+                padding: 14px 35px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO PLEIN ECRAN - Style affiche -->
+    <section class="hero">
+        <div class="hero-image-bg">
+            <img src="visages.png" alt="Terra Kaya - Beaute naturelle inclusive">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-brand">Terra Kaya</div>
+            <div class="hero-sub">Beurre de mangue artisanal</div>
+            <a href="#decouvrir" class="hero-cta">Découvrir</a>
+        </div>
+        <div class="scroll-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M7 13l5 5 5-5M7 7l5 5 5-5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- TAGLINE -->
+    <section class="tagline-section" id="decouvrir">
+        <p class="tagline-text">"De nos terres, à toutes les peaux"</p>
+        <div class="tagline-line"></div>
+    </section>
+
+    <!-- HISTOIRE & ENGAGEMENT -->
+    <section class="histoire">
+        <div class="histoire-inner">
+            <div>
+                <div class="histoire-label">Notre histoire</div>
+                <h2>Un trésor né au cœur du Bénin</h2>
+                <p>Nous avons créé Terra Kaya en 2025 afin d'honorer nos racines et de partager un produit exceptionnel avec le monde. Notre beurre de mangue est fabriqué artisanalement dans le nord du Bénin, avec un engagement profond pour un impact social positif, mesurable et concret en valorisant les produits locaux.</p>
+            </div>
+            <div class="histoire-values">
+                <div class="value-item">
+                    <div class="value-icon">&#x1F331;</div>
+                    <div>
+                        <h3>100% Naturel</h3>
+                        <p>Ingrédients purs, sans additifs chimiques. Un produit brut et authentique.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">&#x1F91D;</div>
+                    <div>
+                        <h3>Commerce équitable</h3>
+                        <p>Rémunération juste des productrices et soutien aux communautés locales.</p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">&#x2764;</div>
+                    <div>
+                        <h3>Savoir-faire artisanal</h3>
+                        <p>Chaque pot est le fruit d'un processus traditionnel transmis de génération en génération.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIENFAITS -->
+    <section class="bienfaits">
+        <div class="bienfaits-label">Les vertus</div>
+        <h2>Bienfaits du beurre de mangue</h2>
+        <div class="bienfaits-grid">
+            <div class="bienfait-card">
+                <span class="bienfait-icon">&#x2728;</span>
+                <h3>Nutrition intense</h3>
+                <p>Nourrit la peau en profondeur et restaure son éclat naturel.</p>
+            </div>
+            <div class="bienfait-card">
+                <span class="bienfait-icon">&#x1F4A7;</span>
+                <h3>Hydratation durable</h3>
+                <p>Hydrate et protège contre les agressions extérieures tout au long de la journée.</p>
+            </div>
+            <div class="bienfait-card">
+                <span class="bienfait-icon">&#x1F33F;</span>
+                <h3>Anti-âge naturel</h3>
+                <p>Lutte contre le vieillissement cutané grâce à ses antioxydants puissants.</p>
+            </div>
+            <div class="bienfait-card">
+                <span class="bienfait-icon">&#x1F490;</span>
+                <h3>Douceur et brillance</h3>
+                <p>Apporte une douceur incomparable et une brillance soyeuse aux cheveux.</p>
+            </div>
+            <div class="bienfait-card">
+                <span class="bienfait-icon">&#x1F33E;</span>
+                <h3>Soin capillaire</h3>
+                <p>Nourrit les longueurs et les pointes pour des cheveux revitalisés.</p>
+            </div>
+            <div class="bienfait-card">
+                <span class="bienfait-icon">&#x1F6E1;</span>
+                <h3>Protection</h3>
+                <p>Protège la fibre capillaire et forme une barrière contre les éléments.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-label">Nous rejoindre</div>
+        <div class="footer-brand">Rejoindre</div>
+        <div class="footer-tagline">la communauté</div>
+        <div class="footer-socials">
+            <a href="https://instagram.com/norkayaa" target="_blank" class="social-link">
+                <div class="social-icon icon-ig">📸</div>
+                <div class="social-info">
+                    <div class="social-name">Instagram</div>
+                    <div class="social-handle">@norkayaa</div>
+                </div>
+                <span class="social-arrow">→</span>
+            </a>
+            <a href="https://wa.me/33749941909" target="_blank" class="social-link">
+                <div class="social-icon icon-wa">💬</div>
+                <div class="social-info">
+                    <div class="social-name">WhatsApp</div>
+                    <div class="social-handle">Nous contacter</div>
+                </div>
+                <span class="social-arrow">→</span>
+            </a>
+            <a href="https://g.page/r/norkaya" target="_blank" class="social-link">
+                <div class="social-icon icon-go">⭐</div>
+                <div class="social-info">
+                    <div class="social-name">Avis Google</div>
+                    <div class="social-handle">13 avis · Norkaya</div>
+                </div>
+                <span class="social-arrow">→</span>
+            </a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Terra Kaya. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
