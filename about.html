@@ -147,38 +147,61 @@ nav {
 }
 
 .about-photo {
-    margin:45px auto;
-    text-align:center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin:60px auto;
 }
 
 .about-photo img {
     width:100%;
-    max-width:520px;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    max-width:420px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.12);
 }
 
 .photo-caption {
-    margin:18px auto 0;
-    max-width:680px;
-    font-size:0.9rem;
-    line-height:1.8;
+    font-size:1rem;
+    line-height:1.9;
     color:#6B5B50;
     font-style:italic;
+    text-align:left;
 }
 
-.lien-section {
+@media(max-width:768px) {
+    .about-photo {
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:22px;
+    }
+
+    .about-photo img {
+        max-width:100%;
+    }
+
+    .photo-caption {
+        text-align:center;
+        font-size:0.92rem;
+    }
+}
+    .lien-flags {
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.-section {
     background:var(--bg-dark);
     padding:80px 40px;
     text-align:center;
 }
 
-.lien-inner {
+.-inner {
     max-width:720px;
     margin:0 auto;
 }
 
-.lien-title {
+.-title {
     font-family:'Cormorant Garamond', serif;
     font-size:2rem;
     font-weight:300;
@@ -186,9 +209,9 @@ nav {
     margin-bottom:24px;
 }
 
-.lien-title em { color:var(--accent); }
+.-title em { color:var(--accent); }
 
-.lien-text {
+.-text {
     color:rgba(247,237,226,0.75);
     font-size:0.95rem;
     line-height:1.9;
@@ -323,7 +346,7 @@ footer {
 @media(max-width:768px) {
     nav { padding:0 20px; }
     .nav-links { gap:14px; }
-    .section, .section-alt, .lien-section, .cta-section {
+    .section, .section-alt, .-section, .cta-section {
         padding:60px 20px;
     }
     .valeurs-grid { grid-template-columns:1fr; }
@@ -387,15 +410,10 @@ footer {
         </p>
     </div>
 </div>
-
-<div class="lien-section">
+    <div class="lien-section">
     <div class="lien-inner">
         <div class="section-eyebrow">Deux cultures, un lien</div>
         <div class="lien-flags">🇲🇶 🤝 🇧🇯</div>
-        .lien-flags {
-    font-size:2rem;
-    margin-bottom:20px;
-}
         <h2 class="lien-title">Martinique <em>&</em> Bénin</h2>
         <p class="lien-text">
             Il existe un lien puissant entre la Martinique et le Bénin, hérité
@@ -480,44 +498,31 @@ footer {
         </p>
     </div>
 
-    ```
-<img
-    src="mangue.png"
-    alt="Mango, la mascotte Terra Kaya"
-    style="
-    width:180px;
-    max-width:100%;
-    margin:0 auto 20px;
-    display:block;
-    ">
+<div class="mango-box">
+    <img
+        src="mangue.png"
+        alt="Mango, la mascotte Terra Kaya"
+        style="width:160px;max-width:100%;margin:0 auto 20px;display:block;"
+    >
 
-<h3>Fais connaissance avec Mango</h3>
+    <h3>Fais connaissance avec Mango</h3>
 
-<p>
-    Mango est la petite mascotte de Terra Kaya. Curieuse, joyeuse et toujours
-    prête à partager ses découvertes, elle t'accompagne pour explorer les
-    secrets du beurre de mangue et ses nombreux bienfaits pour la peau et les cheveux.
-</p>
+    <p>
+        Mango est la petite mascotte de Terra Kaya. Curieuse, joyeuse et toujours
+        prête à partager ses découvertes, elle t'accompagne pour explorer les
+        secrets du beurre de mangue et ses nombreux bienfaits pour la peau et les cheveux.
+    </p>
 
-<p style="
-margin-top:20px;
-color:#C4956A;
-font-style:italic;
-font-weight:500;">
-    « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
-</p>
+    <p style="margin-top:20px;color:#C4956A;font-style:italic;font-weight:500;">
+        « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
+    </p>
 
-<p style="
-margin-top:15px;
-font-size:0.9rem;
-color:#6B5B50;">
-    📱 Retrouve Mango sur Tiktok :
-    <strong>@norkaya1</strong>
-</p>
-```
+    <p style="margin-top:15px;font-size:0.9rem;color:#6B5B50;">
+        📱 Retrouve Mango sur TikTok :
+        <strong>@norkaya1</strong>
+    </p>
+</div>
 
-        </p>
-    </div>
 </div>
 
 <div class="cta-section">
