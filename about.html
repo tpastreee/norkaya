@@ -1,262 +1,338 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos — Norkaya · Terra Kaya</title>
-    <meta name="description" content="L'histoire de Norkaya et Terra Kaya — un projet né du lien entre la Martinique et le Bénin, porté par la fierté, la transmission et la valorisation des savoir-faire africains.">
-    <link rel="canonical" href="https://www.norkaya.fr/about.html">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-cream: #F7EDE2;
-            --bg-dark: #2B1810;
-            --text-dark: #2B1810;
-            --text-light: #F7EDE2;
-            --accent-warm: #C4956A;
-            --white: #FDFAF6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<title>À propos — Norkaya · Terra Kaya</title>
+<meta name="description" content="Découvrez l'histoire de Terra Kaya, marque de beurre de mangue artisanal du Bénin. Un soin naturel pour la peau sèche, les cheveux secs, bouclés, frisés et crépus.">
+<meta name="keywords" content="beurre de mangue, beurre de mangue artisanal, beurre de mangue naturel, Terra Kaya, Norkaya, soin naturel, cosmétique naturelle, Bénin, peau sèche, cheveux secs, cheveux bouclés, cheveux frisés, cheveux crépus">
+<link rel="canonical" href="https://www.norkaya.fr/about.html">
 
-        body {
-            font-family: 'Jost', sans-serif;
-            background: var(--white);
-            color: var(--text-dark);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
-        /* NAV */
-        nav {
-            position: fixed; top: 0; left: 0; right: 0;
-            z-index: 100;
-            background: rgba(253,250,246,0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(196,149,106,0.2);
-            padding: 0 40px;
-            height: 64px;
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .nav-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem; font-weight: 400;
-            color: var(--text-dark); text-decoration: none;
-            letter-spacing: 2px;
-        }
-        .nav-logo em { font-style: italic; color: var(--accent-warm); }
-        .nav-links { display: flex; gap: 32px; }
-        .nav-links a {
-            font-size: 0.75rem; letter-spacing: 3px;
-            text-transform: uppercase; color: var(--text-dark);
-            text-decoration: none; transition: color 0.3s;
-        }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent-warm); }
+<style>
+:root {
+    --bg-cream:#F7EDE2;
+    --bg-dark:#2B1810;
+    --text-dark:#2B1810;
+    --text-light:#F7EDE2;
+    --accent:#C4956A;
+    --white:#FDFAF6;
+}
 
-        /* HERO */
-        .hero {
-            margin-top: 64px;
-            background: var(--bg-dark);
-            padding: 100px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: radial-gradient(ellipse at center, rgba(196,149,106,0.15) 0%, transparent 70%);
-        }
-        .hero-eyebrow {
-            font-size: 0.7rem; letter-spacing: 5px;
-            text-transform: uppercase; color: var(--accent-warm);
-            margin-bottom: 20px; position: relative;
-        }
-        .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 300; color: var(--text-light);
-            line-height: 1.1; margin-bottom: 24px;
-            position: relative;
-        }
-        .hero-title em { font-style: italic; color: var(--accent-warm); }
-        .hero-divider {
-            width: 60px; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
-            margin: 0 auto 24px; position: relative;
-        }
-        .hero-sub {
-            font-size: 1rem; font-weight: 300;
-            color: rgba(247,237,226,0.7);
-            max-width: 560px; margin: 0 auto;
-            line-height: 1.8; position: relative;
-        }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-        /* SECTIONS */
-        .section {
-            padding: 80px 40px;
-            max-width: 860px;
-            margin: 0 auto;
-        }
+body {
+    font-family:'Jost', sans-serif;
+    background:var(--white);
+    color:var(--text-dark);
+}
 
-        .section-alt {
-            background: var(--bg-cream);
-            padding: 80px 40px;
-        }
-        .section-alt-inner {
-            max-width: 860px;
-            margin: 0 auto;
-        }
+nav {
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(253,250,246,0.95);
+    border-bottom:1px solid rgba(196,149,106,0.2);
+    padding:0 40px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-        .section-eyebrow {
-            font-size: 0.7rem; letter-spacing: 5px;
-            text-transform: uppercase; color: var(--accent-warm);
-            margin-bottom: 16px;
-        }
+.nav-logo {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.4rem;
+    color:var(--text-dark);
+    text-decoration:none;
+    letter-spacing:2px;
+}
 
-        .section-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem; font-weight: 400;
-            color: var(--text-dark); line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        .section-title em { font-style: italic; color: var(--accent-warm); }
+.nav-logo em { color:var(--accent); }
 
-        .section-divider {
-            width: 48px; height: 1px;
-            background: linear-gradient(90deg, var(--accent-warm), transparent);
-            margin-bottom: 28px;
-        }
+.nav-links {
+    display:flex;
+    gap:32px;
+}
 
-        .section-text {
-            font-size: 0.95rem; line-height: 1.9;
-            color: #5a4030; font-weight: 300;
-            margin-bottom: 20px;
-        }
+.nav-links a {
+    font-size:0.75rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--text-dark);
+    text-decoration:none;
+}
 
-        /* VALEURS GRID */
-        .valeurs-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            margin-top: 40px;
-        }
+.nav-links a.active { color:var(--accent); }
 
-        .valeur-card {
-            background: var(--white);
-            padding: 28px;
-            border-radius: 8px;
-            border-left: 3px solid var(--accent-warm);
-        }
+.hero {
+    margin-top:64px;
+    background:var(--bg-dark);
+    padding:100px 40px;
+    text-align:center;
+}
 
-        .valeur-icon { font-size: 1.8rem; margin-bottom: 12px; }
+.hero-eyebrow,
+.section-eyebrow {
+    font-size:0.7rem;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:18px;
+}
 
-        .valeur-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem; font-weight: 600;
-            color: var(--text-dark); margin-bottom: 8px;
-        }
+.hero-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(2.5rem,6vw,4rem);
+    font-weight:300;
+    color:var(--text-light);
+    line-height:1.1;
+    margin-bottom:24px;
+}
 
-        .valeur-text {
-            font-size: 0.85rem; line-height: 1.7;
-            color: #6B5B50; font-weight: 300;
-        }
+.hero-title em,
+.section-title em {
+    font-style:italic;
+    color:var(--accent);
+}
 
-        /* LIEN MARTINIQUE BÉNIN */
-        .lien-section {
-            background: var(--bg-dark);
-            padding: 80px 40px;
-            text-align: center;
-        }
-        .lien-inner { max-width: 700px; margin: 0 auto; }
-        .lien-eyebrow {
-            font-size: 0.7rem; letter-spacing: 5px;
-            text-transform: uppercase; color: var(--accent-warm);
-            margin-bottom: 20px;
-        }
-        .lien-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem; font-weight: 300;
-            color: var(--text-light); line-height: 1.2;
-            margin-bottom: 24px;
-        }
-        .lien-title em { font-style: italic; color: var(--accent-warm); }
-        .lien-divider {
-            width: 48px; height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
-            margin: 0 auto 24px;
-        }
-        .lien-text {
-            font-size: 0.95rem; line-height: 1.9;
-            color: rgba(247,237,226,0.75); font-weight: 300;
-        }
-        .lien-flags { font-size: 2rem; margin-bottom: 20px; }
+.hero-sub {
+    max-width:620px;
+    margin:0 auto;
+    color:rgba(247,237,226,0.75);
+    font-size:1rem;
+    line-height:1.8;
+    font-weight:300;
+}
 
-        /* CTA */
-        .cta-section {
-            padding: 80px 40px;
-            text-align: center;
-            background: var(--bg-cream);
-        }
-        .cta-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem; font-weight: 300;
-            color: var(--text-dark); margin-bottom: 16px;
-        }
-        .cta-title em { font-style: italic; color: var(--accent-warm); }
-        .cta-text {
-            font-size: 0.95rem; color: #6B5B50;
-            font-weight: 300; margin-bottom: 32px;
-            max-width: 500px; margin-left: auto; margin-right: auto;
-            line-height: 1.8;
-        }
-        .cta-btn {
-            display: inline-block;
-            background: var(--bg-dark); color: var(--text-light);
-            padding: 16px 40px; text-decoration: none;
-            font-size: 0.8rem; letter-spacing: 3px;
-            text-transform: uppercase; border-radius: 4px;
-            transition: background 0.3s;
-        }
-        .cta-btn:hover { background: var(--accent-warm); }
+.section {
+    padding:80px 40px;
+    max-width:900px;
+    margin:0 auto;
+}
 
-        /* FOOTER */
-        footer {
-            background: var(--bg-dark);
-            padding: 40px;
-            text-align: center;
-        }
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem; color: var(--text-light);
-            letter-spacing: 3px; margin-bottom: 16px;
-        }
-        .footer-links {
-            display: flex; justify-content: center;
-            gap: 24px; margin-bottom: 16px;
-        }
-        .footer-links a {
-            font-size: 0.7rem; letter-spacing: 2px;
-            text-transform: uppercase; color: rgba(247,237,226,0.5);
-            text-decoration: none;
-        }
-        .footer-copy {
-            font-size: 0.7rem; color: rgba(247,237,226,0.3);
-            letter-spacing: 1px;
-        }
+.section-alt {
+    background:var(--bg-cream);
+    padding:80px 40px;
+}
 
-        @media (max-width: 768px) {
-            nav { padding: 0 20px; }
-            .nav-links { gap: 16px; }
-            .section { padding: 60px 20px; }
-            .section-alt { padding: 60px 20px; }
-            .valeurs-grid { grid-template-columns: 1fr; }
-            .lien-section { padding: 60px 20px; }
-            .cta-section { padding: 60px 20px; }
-        }
-    </style>
+.section-alt-inner {
+    max-width:900px;
+    margin:0 auto;
+}
+
+.section-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.2rem;
+    font-weight:400;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.section-divider {
+    width:48px;
+    height:1px;
+    background:linear-gradient(90deg,var(--accent),transparent);
+    margin-bottom:28px;
+}
+
+.section-text {
+    font-size:0.95rem;
+    line-height:1.9;
+    color:#5A4030;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.about-photo {
+    margin:45px auto;
+    text-align:center;
+}
+
+.about-photo img {
+    width:100%;
+    max-width:520px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.photo-caption {
+    margin:18px auto 0;
+    max-width:680px;
+    font-size:0.9rem;
+    line-height:1.8;
+    color:#6B5B50;
+    font-style:italic;
+}
+
+.lien-section {
+    background:var(--bg-dark);
+    padding:80px 40px;
+    text-align:center;
+}
+
+.lien-inner {
+    max-width:720px;
+    margin:0 auto;
+}
+
+.lien-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    font-weight:300;
+    color:var(--text-light);
+    margin-bottom:24px;
+}
+
+.lien-title em { color:var(--accent); }
+
+.lien-text {
+    color:rgba(247,237,226,0.75);
+    font-size:0.95rem;
+    line-height:1.9;
+    font-weight:300;
+}
+
+.valeurs-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:40px;
+}
+
+.valeur-card {
+    background:var(--white);
+    padding:28px;
+    border-radius:8px;
+    border-left:3px solid var(--accent);
+}
+
+.valeur-icon {
+    font-size:1.8rem;
+    margin-bottom:12px;
+}
+
+.valeur-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.valeur-text {
+    font-size:0.85rem;
+    line-height:1.7;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.mango-box {
+    background:#FFF8F1;
+    border:1px solid rgba(196,149,106,0.25);
+    border-radius:14px;
+    padding:40px;
+    text-align:center;
+    margin:60px auto 0;
+}
+
+.mango-box h3 {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.9rem;
+    margin-bottom:15px;
+}
+
+.mango-box p {
+    max-width:620px;
+    margin:0 auto;
+    line-height:1.8;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.cta-section {
+    padding:80px 40px;
+    text-align:center;
+    background:var(--bg-cream);
+}
+
+.cta-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:16px;
+}
+
+.cta-title em { color:var(--accent); }
+
+.cta-text {
+    max-width:520px;
+    margin:0 auto 32px;
+    line-height:1.8;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.cta-btn {
+    display:inline-block;
+    background:var(--bg-dark);
+    color:var(--text-light);
+    padding:16px 40px;
+    text-decoration:none;
+    font-size:0.8rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    border-radius:4px;
+}
+
+footer {
+    background:var(--bg-dark);
+    padding:40px;
+    text-align:center;
+}
+
+.footer-logo {
+    font-family:'Cormorant Garamond', serif;
+    color:var(--text-light);
+    font-size:1.2rem;
+    letter-spacing:3px;
+    margin-bottom:16px;
+}
+
+.footer-links {
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    margin-bottom:16px;
+}
+
+.footer-links a {
+    color:rgba(247,237,226,0.55);
+    text-decoration:none;
+    font-size:0.7rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.footer-copy {
+    color:rgba(247,237,226,0.3);
+    font-size:0.7rem;
+}
+
+@media(max-width:768px) {
+    nav { padding:0 20px; }
+    .nav-links { gap:14px; }
+    .section, .section-alt, .lien-section, .cta-section {
+        padding:60px 20px;
+    }
+    .valeurs-grid { grid-template-columns:1fr; }
+}
+</style>
 </head>
+
 <body>
 
-<!-- NAV -->
 <nav>
     <a href="index.html" class="nav-logo">Terra <em>Kaya</em></a>
     <div class="nav-links">
@@ -266,131 +342,166 @@
     </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
     <div class="hero-eyebrow">Notre histoire</div>
     <h1 class="hero-title">Un projet né<br><em>du cœur</em></h1>
-    <div class="hero-divider"></div>
-    <p class="hero-sub">Norkaya, c'est l'histoire d'un lien profond entre deux cultures, deux continents, et une passion pour les trésors naturels du Bénin.</p>
+    <p class="hero-sub">
+        Norkaya, c'est l'histoire d'un lien profond entre deux cultures,
+        deux continents et une passion pour les trésors naturels du Bénin.
+    </p>
 </div>
 
-<!-- POURQUOI CE PROJET -->
 <div class="section">
     <div class="section-eyebrow">Nos origines</div>
     <h2 class="section-title">Pourquoi j'ai lancé<br><em>ce projet</em></h2>
     <div class="section-divider"></div>
-    <p class="section-text">Ce projet est né d'un ancrage profond, intime et familial. Le Bénin est le pays d'origine de mon fils et de mon compagnon — un pays qui est devenu au fil du temps mon pays adoptif. Il fait partie de nous, de notre quotidien, de notre identité.</p>
-    <p class="section-text">J'ai eu envie de célébrer ces deux cultures, de mettre en lumière nos histoires et nos savoir-faire, de permettre aux personnes afro-descendantes d'avoir accès aux produits de chez elles, fabriqués avec respect et authenticité.</p>
-    <p class="section-text">Et de partager ces trésors avec tous ceux qui recherchent des produits naturels, simples et efficaces. Ce projet est rempli de sens. C'est une fierté immense. 🥭</p>
-</div>
 
-<!-- LIEN MARTINIQUE BÉNIN -->
-<div class="lien-section">
-    <div class="lien-inner">
-        <div class="lien-eyebrow">Deux cultures, un lien</div>
-        <div class="lien-flags">🇲🇶 🤝 🇧🇯</div>
-        <h2 class="lien-title">Martinique <em>&</em> Bénin</h2>
-        <div class="lien-divider"></div>
-        <p class="lien-text">Il existe un lien puissant entre la Martinique et le Bénin, hérité de notre histoire commune, des échanges culturels, spirituels et économiques qui renaissent aujourd'hui. En 2025, ces deux territoires ouvrent un océan de projets ensemble. Norkaya s'inscrit dans cette renaissance. 🌍</p>
+    <p class="section-text">
+        Terra Kaya est née d'un ancrage profond, intime et familial.
+        Le Bénin est le pays d'origine de mon fils et de mon compagnon —
+        un pays qui est devenu au fil du temps mon pays adoptif.
+        Il fait partie de nous, de notre quotidien et de notre histoire.
+    </p>
+
+    <p class="section-text">
+        J'ai eu envie de célébrer ces cultures, de mettre en lumière nos
+        histoires et nos savoir-faire, et de permettre aux personnes
+        afro-descendantes d'avoir accès à des produits de chez elles,
+        fabriqués avec respect, authenticité et exigence.
+    </p>
+
+    <p class="section-text">
+        À travers Terra Kaya, je souhaite aussi faire découvrir un trésor
+        encore trop peu connu en France : le beurre de mangue artisanal du Bénin,
+        un soin naturel apprécié pour nourrir la peau sèche et prendre soin des
+        cheveux secs, bouclés, frisés ou crépus.
+    </p>
+
+    <div class="about-photo">
+        <img src="therese-et-son-fils.jpg"
+             alt="Fondatrice de Terra Kaya et son fils, marque de beurre de mangue artisanal du Bénin">
+        <p class="photo-caption">
+            Terra Kaya est aussi une histoire de transmission. À travers cette marque,
+            je souhaite transmettre à mon fils l'importance de nos racines, de notre
+            histoire et des savoir-faire qui nous relient.
+        </p>
     </div>
 </div>
 
-<!-- NOS VALEURS -->
+<div class="lien-section">
+    <div class="lien-inner">
+        <div class="section-eyebrow">Deux cultures, un lien</div>
+        <h2 class="lien-title">Martinique <em>&</em> Bénin</h2>
+        <p class="lien-text">
+            Il existe un lien puissant entre la Martinique et le Bénin, hérité
+            de notre histoire commune, des échanges culturels, spirituels et
+            économiques qui renaissent aujourd'hui. Norkaya s'inscrit dans cette
+            dynamique de transmission, de fierté et de valorisation des richesses
+            naturelles africaines.
+        </p>
+    </div>
+</div>
+
 <div class="section-alt">
     <div class="section-alt-inner">
         <div class="section-eyebrow">Ce qui nous définit</div>
         <h2 class="section-title">Nos <em>engagements</em></h2>
         <div class="section-divider"></div>
+
         <div class="valeurs-grid">
             <div class="valeur-card">
                 <div class="valeur-icon">👩🏾‍🌾</div>
                 <div class="valeur-title">Artisanat féminin</div>
-                <p class="valeur-text">Nous travaillons avec une productrice béninoise au nord du Bénin, qui fabrique à la main selon des techniques traditionnelles transmises de génération en génération.</p>
+                <p class="valeur-text">
+                    Nous travaillons avec une productrice béninoise au nord du Bénin,
+                    qui fabrique à la main selon des techniques traditionnelles.
+                </p>
             </div>
+
             <div class="valeur-card">
                 <div class="valeur-icon">🌍</div>
                 <div class="valeur-title">Impact local</div>
-                <p class="valeur-text">Chaque pot acheté soutient directement des familles et des communautés du nord du Bénin. Nous créons des revenus stables là où ils sont le plus nécessaires.</p>
+                <p class="valeur-text">
+                    Chaque pot acheté soutient une filière artisanale locale
+                    et participe à la valorisation des ressources du Bénin.
+                </p>
             </div>
+
             <div class="valeur-card">
                 <div class="valeur-icon">🌱</div>
-                <div class="valeur-title">100% Naturel</div>
-                <p class="valeur-text">Sans additif, sans parfum synthétique, sans dilution. Juste le fruit, transformé avec soin selon un procédé à froid pour préserver toutes ses propriétés.</p>
+                <div class="valeur-title">Soin naturel</div>
+                <p class="valeur-text">
+                    Notre beurre de mangue est un soin naturel, simple et polyvalent,
+                    pensé pour la peau, le corps et les cheveux.
+                </p>
             </div>
+
             <div class="valeur-card">
                 <div class="valeur-icon">🤝</div>
-                <div class="valeur-title">Commerce équitable</div>
-                <p class="valeur-text">Pas d'intermédiaires, pas d'exploitation. Seulement du respect, de la coopération et une juste rémunération pour chaque acteur de la chaîne.</p>
+                <div class="valeur-title">Commerce responsable</div>
+                <p class="valeur-text">
+                    Nous privilégions une relation directe, respectueuse et équitable
+                    avec les personnes qui participent à la production.
+                </p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- POURQUOI LE BEURRE DE MANGUE -->
 <div class="section">
     <div class="section-eyebrow">Notre produit phare</div>
     <h2 class="section-title">Pourquoi le beurre<br><em>de mangue du Bénin ?</em></h2>
     <div class="section-divider"></div>
-    <p class="section-text">Parce qu'il incarne tout ce que nous voulions transmettre — un produit naturel, un savoir-faire artisanal, une qualité exceptionnelle, une histoire humaine forte et un bénéfice réel pour la peau et les cheveux.</p>
-    <p class="section-text">Obtenu à froid pour conserver toutes les vitamines, les nutriments et les propriétés du fruit. Un super-ingrédient naturel, encore trop méconnu, que nous sommes fières de mettre en lumière.</p>
-</div>
-<div style="margin:50px 0;text-align:center;">
-    <img src="photo-fournisseuse.jpg"
-         alt="Partenariat avec notre productrice au Bénin"
-         style="width:100%;max-width:650px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08);">
 
-    <p style="margin-top:15px;font-size:0.9rem;color:#6B5B50;font-style:italic;line-height:1.8;">
-        Une rencontre qui donne tout son sens à Terra Kaya.
-        Derrière chaque pot se trouvent des femmes, un savoir-faire artisanal
-        et une histoire que nous sommes fiers de partager.
-    </p>
-</div>
-    <div style="
-background:#FFF8F1;
-border:1px solid rgba(196,149,106,0.25);
-border-radius:12px;
-padding:35px;
-margin:60px 0;
-text-align:center;
-">
-
-    <div style="font-size:3rem;margin-bottom:10px;">🥭</div>
-
-    <h3 style="
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.8rem;
-    color:#2B1810;
-    margin-bottom:15px;">
-        Fais connaissance avec Mango
-    </h3>
-
-    <p style="
-    max-width:550px;
-    margin:0 auto;
-    line-height:1.8;
-    color:#6B5B50;">
-        Mango est la petite mascotte de Terra Kaya.
-        À travers nos réseaux sociaux, elle partage des astuces,
-        des conseils et des anecdotes pour découvrir tous les secrets
-        du beurre de mangue.
+    <p class="section-text">
+        Le beurre de mangue Terra Kaya est fabriqué à partir du noyau de la mangue,
+        selon un savoir-faire traditionnel. Naturellement riche et nourrissant,
+        il est apprécié pour prendre soin des peaux sèches, sensibles, ainsi que
+        des cheveux secs, bouclés, frisés ou crépus.
     </p>
 
-    <p style="
-    margin-top:15px;
-    color:#C4956A;
-    font-style:italic;">
-        « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
+    <p class="section-text">
+        Ce beurre de mangue artisanal incarne tout ce que nous souhaitons transmettre :
+        un produit naturel, une histoire humaine forte, une origine précieuse et un
+        soin authentique inspiré des richesses du Bénin.
     </p>
 
+    <div class="about-photo">
+        <img src="pot-terrakaya.jpg"
+             alt="Pot de beurre de mangue artisanal Terra Kaya, soin naturel pour la peau et les cheveux">
+        <p class="photo-caption">
+            Le beurre de mangue Terra Kaya est un soin naturel polyvalent qui nourrit,
+            protège et sublime la peau et les cheveux.
+        </p>
+    </div>
+
+    <div class="mango-box">
+        <div style="font-size:3rem;margin-bottom:10px;">🥭</div>
+        <h3>Fais connaissance avec Mango</h3>
+        <p>
+            Mango est la petite mascotte de Terra Kaya. À travers nos réseaux sociaux,
+            elle partage des astuces, des conseils et des anecdotes pour découvrir
+            tous les secrets du beurre de mangue.
+        </p>
+        <p style="margin-top:15px;color:#C4956A;font-style:italic;">
+            « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
+        </p>
+    </div>
 </div>
-<!-- CTA -->
+
 <div class="cta-section">
     <h2 class="cta-title">Rejoins l'aventure<br><em>Terra Kaya</em></h2>
-    <p class="cta-text">Le lancement officiel arrive bientôt. Inscris-toi sur la liste d'attente pour être parmi les premières à découvrir notre beurre de mangue artisanal du Bénin.</p>
-    <a href="https://d5d43def.sibforms.com/serve/MUIFAJIRRSD8l3wBgPaVccFoPx5KhPHXJgq-L6raLWLHXdc_-0XYHLNBYaVw_Vylz0crl0mfsvpqug8X-5Kl2QCrLliso-TFB17vlRmLvkkvAmKhr2PgKMnlH5VXh_N5nHsYe9oTGFFI1OeoNCDcD6C5KdBUysa6Kpi2SV241QGO9qCFDQdFhYFiKYMsYW8Ru4bfjX_XlctjayZmqQ==" target="_blank" class="cta-btn">Rejoindre la liste d'attente 🥭</a>
+    <p class="cta-text">
+        Le lancement officiel arrive bientôt. Inscris-toi sur la liste d'attente
+        pour être parmi les premières à découvrir notre beurre de mangue artisanal du Bénin.
+    </p>
+    <a href="https://d5d43def.sibforms.com/serve/MUIFAJIRRSD8l3wBgPaVccFoPx5KhPHXJgq-L6raLWLHXdc_-0XYHLNBYaVw_Vylz0crl0mfsvpqug8X-5Kl2QCrLliso-TFB17vlRmLvkkvAmKhr2PgKMnlH5VXh_N5nHsYe9oTGFFI1OeoNCDcD6C5KdBUysa6Kpi2SV241QGO9qCFDQdFhYFiKYMsYW8Ru4bfjX_XlctjayZmqQ=="
+       target="_blank"
+       class="cta-btn">
+       Rejoindre la liste d'attente 🥭
+    </a>
 </div>
 
-<!-- FOOTER -->
 <footer>
     <div class="footer-logo">Terra Kaya · by Norkaya</div>
     <div class="footer-links">
