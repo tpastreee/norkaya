@@ -148,7 +148,7 @@ nav {
 
 .about-photo {
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:1fr 1fr;
     gap:40px;
     align-items:center;
     margin:60px auto;
@@ -169,39 +169,23 @@ nav {
     text-align:left;
 }
 
-@media(max-width:768px) {
-    .about-photo {
-        grid-template-columns:1fr;
-        text-align:center;
-        gap:22px;
-    }
-
-    .about-photo img {
-        max-width:100%;
-    }
-
-    .photo-caption {
-        text-align:center;
-        font-size:0.92rem;
-    }
-}
-    .lien-flags {
-    font-size:2rem;
-    margin-bottom:20px;
-}
-
-.-section {
+.lien-section {
     background:var(--bg-dark);
     padding:80px 40px;
     text-align:center;
 }
 
-.-inner {
+.lien-inner {
     max-width:720px;
     margin:0 auto;
 }
 
-.-title {
+.lien-flags {
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.lien-title {
     font-family:'Cormorant Garamond', serif;
     font-size:2rem;
     font-weight:300;
@@ -209,9 +193,9 @@ nav {
     margin-bottom:24px;
 }
 
-.-title em { color:var(--accent); }
+.lien-title em { color:var(--accent); }
 
-.-text {
+.lien-text {
     color:rgba(247,237,226,0.75);
     font-size:0.95rem;
     line-height:1.9;
@@ -258,6 +242,13 @@ nav {
     padding:40px;
     text-align:center;
     margin:60px auto 0;
+}
+
+.mango-box img {
+    width:160px;
+    max-width:100%;
+    margin:0 auto 20px;
+    display:block;
 }
 
 .mango-box h3 {
@@ -346,10 +337,32 @@ footer {
 @media(max-width:768px) {
     nav { padding:0 20px; }
     .nav-links { gap:14px; }
-    .section, .section-alt, .-section, .cta-section {
+
+    .section,
+    .section-alt,
+    .lien-section,
+    .cta-section {
         padding:60px 20px;
     }
-    .valeurs-grid { grid-template-columns:1fr; }
+
+    .about-photo {
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:22px;
+    }
+
+    .about-photo img {
+        max-width:100%;
+    }
+
+    .photo-caption {
+        text-align:center;
+        font-size:0.92rem;
+    }
+
+    .valeurs-grid {
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
@@ -410,7 +423,8 @@ footer {
         </p>
     </div>
 </div>
-    <div class="lien-section">
+
+<div class="lien-section">
     <div class="lien-inner">
         <div class="section-eyebrow">Deux cultures, un lien</div>
         <div class="lien-flags">🇲🇶 🤝 🇧🇯</div>
@@ -445,7 +459,7 @@ footer {
                 <div class="valeur-icon">🌍</div>
                 <div class="valeur-title">Impact local</div>
                 <p class="valeur-text">
-                    Chaque  acheté soutient une filière artisanale locale
+                    Chaque pot acheté soutient une filière artisanale locale
                     et participe à la valorisation des ressources du Bénin.
                 </p>
             </div>
@@ -498,31 +512,27 @@ footer {
         </p>
     </div>
 
-<div class="mango-box">
-    <img
-        src="mangue.png"
-        alt="Mango, la mascotte Terra Kaya"
-        style="width:160px;max-width:100%;margin:0 auto 20px;display:block;"
-    >
+    <div class="mango-box">
+        <img src="mangue.png"
+             alt="Mango, la mascotte Terra Kaya">
 
-    <h3>Fais connaissance avec Mango</h3>
+        <h3>Fais connaissance avec Mango</h3>
 
-    <p>
-        Mango est la petite mascotte de Terra Kaya. Curieuse, joyeuse et toujours
-        prête à partager ses découvertes, elle t'accompagne pour explorer les
-        secrets du beurre de mangue et ses nombreux bienfaits pour la peau et les cheveux.
-    </p>
+        <p>
+            Mango est la petite mascotte de Terra Kaya. Curieuse, joyeuse et toujours
+            prête à partager ses découvertes, elle t'accompagne pour explorer les
+            secrets du beurre de mangue et ses nombreux bienfaits pour la peau et les cheveux.
+        </p>
 
-    <p style="margin-top:20px;color:#C4956A;font-style:italic;font-weight:500;">
-        « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
-    </p>
+        <p style="margin-top:20px;color:#C4956A;font-style:italic;font-weight:500;">
+            « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
+        </p>
 
-    <p style="margin-top:15px;font-size:0.9rem;color:#6B5B50;">
-        📱 Retrouve Mango sur TikTok :
-        <strong>@norkaya1</strong>
-    </p>
-</div>
-
+        <p style="margin-top:15px;font-size:0.9rem;color:#6B5B50;">
+            📱 Retrouve Mango sur TikTok :
+            <strong>@norkaya1</strong>
+        </p>
+    </div>
 </div>
 
 <div class="cta-section">
