@@ -334,6 +334,44 @@ footer {
     font-size:0.7rem;
 }
 
+
+.footer-columns {
+    max-width: 960px;
+    margin: 32px auto 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: left;
+}
+
+.footer-col-title {
+    color: var(--accent);
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    display: block;
+    color: rgba(247,237,226,0.58);
+    text-decoration: none;
+    font-size: 0.76rem;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.footer-col a:hover { color: var(--accent); }
+
+@media(max-width:768px) {
+    .footer-columns { grid-template-columns: 1fr 1fr; text-align: center; }
+}
+
+@media(max-width:520px) {
+    .nav-links { overflow-x:auto; max-width: 68vw; padding-bottom: 4px; }
+    .footer-columns { grid-template-columns: 1fr; }
+}
+
 @media(max-width:768px) {
     nav { padding:0 20px; }
     .nav-links { gap:14px; }
@@ -373,7 +411,9 @@ footer {
     <a href="index.html" class="nav-logo">Terra <em>Kaya</em></a>
     <div class="nav-links">
         <a href="index.html">Accueil</a>
-        <a href="index.html#produit">Produit</a>
+        <a href="index.html#produit">Beurre de mangue</a>
+        <a href="quesiah.html">Savons Koto</a>
+        <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
         <a href="about.html" class="active">À propos</a>
     </div>
 </nav>
@@ -538,23 +578,43 @@ footer {
 <div class="cta-section">
     <h2 class="cta-title">Rejoins l'aventure<br><em>Terra Kaya</em></h2>
     <p class="cta-text">
-        Le lancement officiel arrive bientôt. Inscris-toi sur la liste d'attente
-        pour être parmi les premières à découvrir notre beurre de mangue artisanal du Bénin.
+        Le beurre de mangue Terra Kaya est disponible à la commande en ligne. Retrouvez notre produit phare et complétez votre routine naturelle.
     </p>
-    <a href="https://d5d43def.sibforms.com/serve/MUIFAJIRRSD8l3wBgPaVccFoPx5KhPHXJgq-L6raLWLHXdc_-0XYHLNBYaVw_Vylz0crl0mfsvpqug8X-5Kl2QCrLliso-TFB17vlRmLvkkvAmKhr2PgKMnlH5VXh_N5nHsYe9oTGFFI1OeoNCDcD6C5KdBUysa6Kpi2SV241QGO9qCFDQdFhYFiKYMsYW8Ru4bfjX_XlctjayZmqQ=="
-       target="_blank"
-       class="cta-btn">
-       Rejoindre la liste d'attente 🥭
-    </a>
+    <a href="https://buy.stripe.com/5kQ9ANca91oL68Y3xp1wY06" target="_blank" rel="noopener" class="cta-btn">Acheter le beurre de mangue 🥭</a>
 </div>
 
 <footer>
     <div class="footer-logo">Terra Kaya · by Norkaya</div>
-    <div class="footer-links">
-        <a href="index.html">Accueil</a>
-        <a href="index.html#produit">Produit</a>
-        <a href="about.html">À propos</a>
+
+    <div class="footer-columns">
+        <div class="footer-col">
+            <div class="footer-col-title">Boutique</div>
+            <a href="index.html#produit">Beurre de mangue</a>
+            <a href="quesiah.html">Savons Koto</a>
+            <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Norkaya</div>
+            <a href="about.html">À propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Commandes</div>
+            <a href="livraison-points-de-vente.html">Livraison & Points de vente</a>
+            <a href="retours-remboursements.html">Retours & remboursements</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Légal</div>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="cgv.html">CGV</a>
+            <a href="confidentialite.html">Confidentialité</a>
+        </div>
     </div>
+
     <div class="footer-copy">© 2026 Norkaya — Terra Kaya · Tous droits réservés</div>
 </footer>
 
