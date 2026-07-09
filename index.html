@@ -912,17 +912,28 @@
                 font-size: 0.75rem;
             }
         }
-    </style>
+    
+        @media (max-width: 820px) {
+            nav { padding: 0 18px !important; overflow-x: auto; }
+            nav > div { gap: 18px !important; min-width: max-content; }
+            footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; text-align: center !important; }
+        }
+        @media (max-width: 520px) {
+            footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+        }
+</style>
 </head>
 <body>
 
 <nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(196,149,106,0.2);padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;">
     <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:#2B1810;text-decoration:none;letter-spacing:2px;">Terra <em style="font-style:italic;color:#C4956A;">Kaya</em></a>
-    <div style="display:flex;gap:32px;">
+    <div style="display:flex;gap:32px;align-items:center;">
         <a href="index.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Accueil</a>
-        <a href="index.html#produit" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Produit</a>
-        <a href="about.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;text-decoration:none;">À propos</a>
+        <a href="index.html#produit" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Beurre de mangue</a>
+        <a href="quesiah.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Savons Koto</a>
         <a href="bienfaits-beurre-mangue.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Bienfaits</a>
+        <a href="about.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;text-decoration:none;">À propos</a>
+        <a href="contact.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Contact</a>
     </div>
 </nav>
 <div style="height:64px;"></div>
@@ -1046,7 +1057,7 @@
 
                 <div class="fiche-avis">
                     <span class="etoiles">★★★★★</span>
-                    <span class="avis-count">Bientôt disponible</span>
+                    <span class="avis-count">Disponible en ligne</span>
                 </div>
 
                 <div class="fiche-tags-line">
@@ -1066,8 +1077,8 @@
                     <span class="fiche-format">100 ml</span>
                 </div>
 
-                <a href="https://d5d43def.sibforms.com/serve/MUIFAJIRRSD8l3wBgPaVccFoPx5KhPHXJgq-L6raLWLHXdc_-0XYHLNBYaVw_Vylz0crl0mfsvpqug8X-5Kl2QCrLliso-TFB17vlRmLvkkvAmKhr2PgKMnlH5VXh_N5nHsYe9oTGFFI1OeoNCDcD6C5KdBUysa6Kpi2SV241QGO9qCFDQdFhYFiKYMsYW8Ru4bfjX_XlctjayZmqQ==" target="_blank" class="fiche-cta-btn">
-                    Être notifiée à l'ouverture →
+                <a href="https://buy.stripe.com/5kQ9ANca91oL68Y3xp1wY06" target="_blank" rel="noopener" class="fiche-cta-btn">
+                    Acheter maintenant · 11,00 € →
                 </a>
 
                 <div class="fiche-accordeons">
@@ -1269,12 +1280,12 @@
 </style>
 </section>
     <footer>
-    <div class="footer-label">Nous rejoindre</div>
-    <div class="footer-brand">Rejoindre</div>
-    <div class="footer-tagline">la communauté</div>
+    <div class="footer-label">Norkaya</div>
+    <div class="footer-brand">Terra <em style="font-style:italic;color:#C4956A;">Kaya</em></div>
+    <div class="footer-tagline">des soins naturels, soigneusement sélectionnés</div>
 
     <div class="footer-socials">
-        <a href="https://instagram.com/norkayaa" target="_blank" class="social-link">
+        <a href="https://instagram.com/norkayaa" target="_blank" rel="noopener" class="social-link">
             <div class="social-icon icon-ig">📸</div>
             <div class="social-info">
                 <div class="social-name">Instagram</div>
@@ -1283,7 +1294,7 @@
             <span class="social-arrow">→</span>
         </a>
 
-        <a href="https://wa.me/33749941909" target="_blank" class="social-link">
+        <a href="https://wa.me/33749941909" target="_blank" rel="noopener" class="social-link">
             <div class="social-icon icon-wa">💬</div>
             <div class="social-info">
                 <div class="social-name">WhatsApp</div>
@@ -1293,7 +1304,32 @@
         </a>
     </div>
 
-    <p class="footer-copy">&copy; 2025 Terra Kaya. Tous droits réservés.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;max-width:920px;margin:0 auto 36px;text-align:left;">
+        <div>
+            <p style="font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;margin-bottom:12px;">Boutique</p>
+            <a href="index.html#produit" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Beurre de mangue</a>
+            <a href="quesiah.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Savons Koto</a>
+        </div>
+        <div>
+            <p style="font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;margin-bottom:12px;">Norkaya</p>
+            <a href="about.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">À propos</a>
+            <a href="contact.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Contact</a>
+            <a href="faq.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">FAQ</a>
+        </div>
+        <div>
+            <p style="font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;margin-bottom:12px;">Commandes</p>
+            <a href="livraison-points-de-vente.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Livraison & Points de vente</a>
+            <a href="retours-remboursements.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Retours & remboursements</a>
+        </div>
+        <div>
+            <p style="font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;margin-bottom:12px;">Légal</p>
+            <a href="mentions-legales.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Mentions légales</a>
+            <a href="cgv.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">CGV</a>
+            <a href="confidentialite.html" style="display:block;color:#6B5B50;text-decoration:none;font-size:0.85rem;margin-bottom:8px;">Confidentialité</a>
+        </div>
+    </div>
+
+    <p class="footer-copy">&copy; 2025 Terra Kaya — Norkaya. Tous droits réservés.</p>
 </footer>
 <script>
 // Thumbnail switcher
