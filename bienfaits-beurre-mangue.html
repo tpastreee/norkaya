@@ -3,1155 +3,620 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Les bienfaits du beurre de mangue – Terra Kaya</title>
-<meta name="description" content="Peau, cheveux, bébé, grossesse, sport : découvrez tous les bienfaits du beurre de mangue artisanal Terra Kaya, produit au cœur du nord Bénin.">
-<link rel="canonical" href="https://norkaya.fr/bienfaits-beurre-mangue.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<title>À propos — Norkaya · Terra Kaya</title>
+<meta name="description" content="Découvrez l'histoire de Terra Kaya, marque de beurre de mangue artisanal du Bénin. Un soin naturel pour la peau sèche, les cheveux secs, bouclés, frisés et crépus.">
+<meta name="keywords" content="beurre de mangue, beurre de mangue artisanal, beurre de mangue naturel, Terra Kaya, Norkaya, soin naturel, cosmétique naturelle, Bénin, peau sèche, cheveux secs, cheveux bouclés, cheveux frisés, cheveux crépus">
+<link rel="canonical" href="https://norkaya.fr/about.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --ivoire: #FAF6F0;
-    --miel: #D4963A;
-    --miel-clair: #F0DEB8;
-    --vert: #3D6B4F;
-    --vert-clair: #EAF2EC;
-    --brun: #6B3E2A;
-    --brun-clair: #F5EDE7;
-    --texte: #2A2016;
-    --texte-doux: #6B5F52;
-    --blanc: #FFFDF9;
-  }
+:root {
+    --bg-cream:#F7EDE2;
+    --bg-dark:#2B1810;
+    --text-dark:#2B1810;
+    --text-light:#F7EDE2;
+    --accent:#C4956A;
+    --white:#FDFAF6;
+}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--ivoire);
-    color: var(--texte);
-    font-size: 17px;
-    line-height: 1.75;
-  }
+body {
+    font-family:'Jost', sans-serif;
+    background:var(--white);
+    color:var(--text-dark);
+}
 
-  /* ── PHOTOS ──────────────────────────────── */
-  .photo-hero-pot {
-    background: var(--ivoire);
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-top: -2px;
-  }
+nav {
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(253,250,246,0.95);
+    border-bottom:1px solid rgba(196,149,106,0.2);
+    padding:0 40px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-  .photo-hero-pot .photo-placeholder {
-    width: 100%;
-    max-width: 680px;
-    aspect-ratio: 4/3;
-  }
+.nav-logo {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.4rem;
+    color:var(--text-dark);
+    text-decoration:none;
+    letter-spacing:2px;
+}
 
-  .photo-inline {
-    margin-top: 48px;
-  }
+.nav-logo em { color:var(--accent); }
 
-  .photo-inline .photo-placeholder {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    aspect-ratio: 16/7;
-    border-radius: 20px;
-    overflow: hidden;
-  }
+.nav-links {
+    display:flex;
+    gap:32px;
+}
 
-  .photo-placeholder {
-    position: relative;
-    overflow: hidden;
-    background: var(--miel-clair);
-  }
+.nav-links a {
+    font-size:0.75rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--text-dark);
+    text-decoration:none;
+}
 
-  .photo-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+.nav-links a.active { color:var(--accent); }
 
-  .photo-placeholder .placeholder-text {
-    display: none;
-  }
+.hero {
+    margin-top:64px;
+    background:var(--bg-dark);
+    padding:100px 40px;
+    text-align:center;
+}
 
-  .photo-placeholder.placeholder-fallback img {
-    display: none;
-  }
+.hero-eyebrow,
+.section-eyebrow {
+    font-size:0.7rem;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:18px;
+}
 
-  .photo-placeholder.placeholder-fallback .placeholder-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0;
-    font-size: 14px;
-    color: var(--brun);
-    font-weight: 500;
-    background: repeating-linear-gradient(
-      45deg,
-      var(--miel-clair),
-      var(--miel-clair) 10px,
-      #f8edd5 10px,
-      #f8edd5 20px
-    );
-    text-shadow: 0 1px 3px rgba(255,255,255,0.6);
-  }
+.hero-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(2.5rem,6vw,4rem);
+    font-weight:300;
+    color:var(--text-light);
+    line-height:1.1;
+    margin-bottom:24px;
+}
 
-  .photo-cta {
-    margin-bottom: 48px;
-  }
+.hero-title em,
+.section-title em {
+    font-style:italic;
+    color:var(--accent);
+}
 
-  .photo-placeholder--cta {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: 0 auto;
-    border: 4px solid rgba(255,255,255,0.2);
-    aspect-ratio: 1;
-  }
+.hero-sub {
+    max-width:620px;
+    margin:0 auto;
+    color:rgba(247,237,226,0.75);
+    font-size:1rem;
+    line-height:1.8;
+    font-weight:300;
+}
 
-  .photo-placeholder--cta.placeholder-fallback .placeholder-text {
-    border-radius: 50%;
-    font-size: 12px;
-    text-align: center;
-    padding: 12px;
-  }
+.section {
+    padding:80px 40px;
+    max-width:900px;
+    margin:0 auto;
+}
 
-  /* ── SOMMAIRE ────────────────────────────── */
-  .sommaire {
-    background: var(--blanc);
-    border-bottom: 1px solid rgba(107,62,42,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 16px rgba(42,32,22,0.06);
-  }
+.section-alt {
+    background:var(--bg-cream);
+    padding:80px 40px;
+}
 
-  .sommaire-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: flex;
-    align-items: center;
+.section-alt-inner {
+    max-width:900px;
+    margin:0 auto;
+}
+
+.section-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.2rem;
+    font-weight:400;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.section-divider {
+    width:48px;
+    height:1px;
+    background:linear-gradient(90deg,var(--accent),transparent);
+    margin-bottom:28px;
+}
+
+.section-text {
+    font-size:0.95rem;
+    line-height:1.9;
+    color:#5A4030;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.about-photo {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin:60px auto;
+}
+
+.about-photo img {
+    width:100%;
+    max-width:420px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.12);
+}
+
+.photo-caption {
+    font-size:1rem;
+    line-height:1.9;
+    color:#6B5B50;
+    font-style:italic;
+    text-align:left;
+}
+
+.lien-section {
+    background:var(--bg-dark);
+    padding:80px 40px;
+    text-align:center;
+}
+
+.lien-inner {
+    max-width:720px;
+    margin:0 auto;
+}
+
+.lien-flags {
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.lien-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    font-weight:300;
+    color:var(--text-light);
+    margin-bottom:24px;
+}
+
+.lien-title em { color:var(--accent); }
+
+.lien-text {
+    color:rgba(247,237,226,0.75);
+    font-size:0.95rem;
+    line-height:1.9;
+    font-weight:300;
+}
+
+.valeurs-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:40px;
+}
+
+.valeur-card {
+    background:var(--white);
+    padding:28px;
+    border-radius:8px;
+    border-left:3px solid var(--accent);
+}
+
+.valeur-icon {
+    font-size:1.8rem;
+    margin-bottom:12px;
+}
+
+.valeur-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.valeur-text {
+    font-size:0.85rem;
+    line-height:1.7;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.mango-box {
+    background:#FFF8F1;
+    border:1px solid rgba(196,149,106,0.25);
+    border-radius:14px;
+    padding:40px;
+    text-align:center;
+    margin:60px auto 0;
+}
+
+.mango-box img {
+    width:160px;
+    max-width:100%;
+    margin:0 auto 20px;
+    display:block;
+}
+
+.mango-box h3 {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.9rem;
+    margin-bottom:15px;
+}
+
+.mango-box p {
+    max-width:620px;
+    margin:0 auto;
+    line-height:1.8;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.cta-section {
+    padding:80px 40px;
+    text-align:center;
+    background:var(--bg-cream);
+}
+
+.cta-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:16px;
+}
+
+.cta-title em { color:var(--accent); }
+
+.cta-text {
+    max-width:520px;
+    margin:0 auto 32px;
+    line-height:1.8;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.cta-btn {
+    display:inline-block;
+    background:var(--bg-dark);
+    color:var(--text-light);
+    padding:16px 40px;
+    text-decoration:none;
+    font-size:0.8rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    border-radius:4px;
+}
+
+footer {
+    background:var(--bg-dark);
+    padding:40px;
+    text-align:center;
+}
+
+.footer-logo {
+    font-family:'Cormorant Garamond', serif;
+    color:var(--text-light);
+    font-size:1.2rem;
+    letter-spacing:3px;
+    margin-bottom:16px;
+}
+
+.footer-links {
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    margin-bottom:16px;
+}
+
+.footer-links a {
+    color:rgba(247,237,226,0.55);
+    text-decoration:none;
+    font-size:0.7rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.footer-copy {
+    color:rgba(247,237,226,0.3);
+    font-size:0.7rem;
+}
+
+
+.footer-columns {
+    max-width: 960px;
+    margin: 32px auto 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
+    text-align: left;
+}
 
-  .sommaire-inner::-webkit-scrollbar { display: none; }
-
-  .sommaire-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.15em;
+.footer-col-title {
+    color: var(--accent);
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: var(--texte-doux);
-    white-space: nowrap;
-    flex-shrink: 0;
-    padding: 18px 0;
-  }
-
-  .sommaire-links {
-    display: flex;
-    gap: 4px;
-    flex-shrink: 0;
-  }
-
-  .sommaire-link {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 8px 16px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 500;
-    color: var(--texte-doux);
-    white-space: nowrap;
-    transition: background 0.18s, color 0.18s;
-    margin: 10px 0;
-  }
-
-  .sommaire-link:hover {
-    background: var(--miel-clair);
-    color: var(--brun);
-  }
-
-  .sommaire-link.active {
-    background: var(--miel);
-    color: var(--blanc);
-  }
-
-  .sommaire-icon {
-    font-size: 15px;
-    line-height: 1;
-  }
-
-  @media (max-width: 520px) {
-    .sommaire-label { display: none; }
-    .sommaire-inner { gap: 0; padding: 0 16px; }
-    .sommaire-link { padding: 8px 12px; font-size: 12.5px; gap: 5px; }
-  }
-
-  /* ── HERO ─────────────────────────────────── */
-  .hero {
-    background: linear-gradient(160deg, #3D6B4F 0%, #2A4A38 55%, #6B3E2A 100%);
-    color: var(--blanc);
-    padding: 100px 32px 80px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 60% 30%, rgba(212,150,58,0.18) 0%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .hero-eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--miel-clair);
-    margin-bottom: 20px;
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.6rem, 6vw, 4.4rem);
-    font-weight: 300;
-    line-height: 1.12;
-    margin-bottom: 24px;
-    max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--miel-clair);
-  }
-
-  .hero-sub {
-    font-size: 16px;
-    color: rgba(255,253,249,0.75);
-    max-width: 520px;
-    margin: 0 auto 48px;
-    font-weight: 300;
-  }
-
-  .hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .hero-tag {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 100px;
-    padding: 6px 18px;
-    font-size: 13px;
-    color: var(--miel-clair);
-    letter-spacing: 0.05em;
-  }
-
-  /* ── INTRO ───────────────────────────────── */
-  .intro {
-    max-width: 720px;
-    margin: 80px auto;
-    padding: 0 32px;
-    text-align: center;
-  }
-
-  .intro h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: var(--brun);
-  }
-
-  .intro p {
-    color: var(--texte-doux);
-    font-weight: 300;
-  }
-
-  .intro .origine {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 36px;
-    background: var(--vert-clair);
-    border-radius: 12px;
-    padding: 16px 24px;
-    font-size: 14px;
-    color: var(--vert);
-    font-weight: 500;
-  }
-
-  .origine-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--vert);
-    flex-shrink: 0;
-  }
-
-  /* ── COMPOSITION CARD ────────────────────── */
-  .compo-section {
-    background: var(--blanc);
-    padding: 72px 32px;
-  }
-
-  .compo-inner {
-    max-width: 880px;
-    margin: 0 auto;
-  }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--miel);
     margin-bottom: 12px;
+}
+
+.footer-col a {
     display: block;
-  }
-
-  .compo-inner h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 400;
-    margin-bottom: 40px;
-    color: var(--texte);
-  }
-
-  .compo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-
-  .compo-card {
-    background: var(--ivoire);
-    border-radius: 16px;
-    padding: 24px 20px;
-    border-left: 3px solid var(--miel);
-  }
-
-  .compo-card .acide {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--brun);
-    margin-bottom: 6px;
-  }
-
-  .compo-card .type {
-    font-size: 12px;
-    color: var(--miel);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .compo-card p {
-    font-size: 14px;
-    color: var(--texte-doux);
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  /* ── BIENFAITS SECTIONS ──────────────────── */
-  .bienfait-block {
-    padding: 80px 32px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .bienfait-block.alt {
-    background: var(--blanc);
-    max-width: 100%;
-    padding: 80px 32px;
-  }
-
-  .bienfait-block.alt .bienfait-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .bienfait-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 36px;
-  }
-
-  .bienfait-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    flex-shrink: 0;
-    margin-top: 4px;
-  }
-
-  .icon-peau { background: var(--miel-clair); }
-  .icon-cheveux { background: var(--brun-clair); }
-  .icon-bebe { background: var(--vert-clair); }
-  .icon-grossesse { background: #F0E8F5; }
-  .icon-sport { background: #E8F0F5; }
-
-  .bienfait-title-wrap h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    font-weight: 400;
-    color: var(--texte);
-    line-height: 1.2;
-    margin-bottom: 6px;
-  }
-
-  .bienfait-title-wrap .subtitle {
-    font-size: 13px;
-    color: var(--texte-doux);
-    font-weight: 300;
-  }
-
-  .bienfait-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 60px;
-  }
-
-  @media (max-width: 640px) {
-    .bienfait-body { grid-template-columns: 1fr; gap: 28px; }
-    .bienfait-header { flex-direction: column; gap: 12px; }
-  }
-
-  .bienfait-point h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--brun);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .bienfait-point h3::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: var(--miel);
-    flex-shrink: 0;
-  }
-
-  .bienfait-point p {
-    font-size: 15px;
-    color: var(--texte-doux);
-    font-weight: 300;
-    line-height: 1.7;
-  }
-
-  /* ── CONSEIL BOX ─────────────────────────── */
-  .conseil-box {
-    background: linear-gradient(135deg, var(--vert) 0%, #2A4A38 100%);
-    border-radius: 20px;
-    padding: 36px 40px;
-    color: var(--blanc);
-    margin-top: 40px;
-  }
-
-  .conseil-box .conseil-label {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--miel-clair);
-    margin-bottom: 12px;
-    font-weight: 500;
-  }
-
-  .conseil-box p {
-    font-size: 15px;
-    font-weight: 300;
-    opacity: 0.9;
-    line-height: 1.7;
-  }
-
-  .conseil-box strong {
-    color: var(--miel-clair);
-    font-weight: 500;
-  }
-
-  /* ── USAGE STRIP ─────────────────────────── */
-  .usage-strip {
-    background: var(--brun-clair);
-    padding: 72px 32px;
-  }
-
-  .usage-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .usage-inner h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 400;
-    color: var(--brun);
-    margin-bottom: 36px;
-    text-align: center;
-  }
-
-  .usage-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-
-  .usage-card {
-    background: var(--blanc);
-    border-radius: 16px;
-    padding: 28px 24px;
-  }
-
-  .usage-card .usage-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--texte);
-    margin-bottom: 4px;
-  }
-
-  .usage-card .usage-dose {
-    font-size: 12px;
-    color: var(--miel);
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    margin-bottom: 12px;
-  }
-
-  .usage-card p {
-    font-size: 14px;
-    color: var(--texte-doux);
-    font-weight: 300;
-    line-height: 1.65;
-  }
-
-  /* ── CONSERVATION ────────────────────────── */
-  .conservation {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 72px 32px;
-    text-align: center;
-  }
-
-  .conservation h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    font-weight: 400;
-    color: var(--texte);
-    margin-bottom: 20px;
-  }
-
-  .conservation p {
-    color: var(--texte-doux);
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 14px;
-  }
-
-  .conservation .note {
-    background: var(--miel-clair);
-    border-radius: 12px;
-    padding: 16px 22px;
-    font-size: 14px;
-    color: var(--brun);
-    margin-top: 24px;
-    line-height: 1.65;
-  }
-
-  /* ── CTA ─────────────────────────────────── */
-  .cta-section {
-    background: linear-gradient(160deg, var(--brun) 0%, #3D2015 100%);
-    padding: 100px 32px;
-    text-align: center;
-    color: var(--blanc);
-  }
-
-  .cta-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 300;
-    line-height: 1.15;
-    max-width: 600px;
-    margin: 0 auto 16px;
-  }
-
-  .cta-section h2 em {
-    color: var(--miel-clair);
-    font-style: italic;
-  }
-
-  .cta-section p {
-    color: rgba(255,253,249,0.7);
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 40px;
-  }
-
-  .btn-miel {
-    display: inline-block;
-    background: var(--miel);
-    color: var(--blanc);
+    color: rgba(247,237,226,0.58);
     text-decoration: none;
-    padding: 16px 40px;
-    border-radius: 100px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .btn-miel:hover {
-    background: #C4872A;
-    transform: translateY(-1px);
-  }
-
-  /* ── DIVIDER ─────────────────────────────── */
-  .divider {
-    width: 48px;
-    height: 2px;
-    background: var(--miel);
-    margin: 0 auto 40px;
-  }
-
-  /* ── FAQ ─────────────────────────────────── */
-  .faq-section {
-    background: var(--blanc);
-    padding: 80px 32px;
-  }
-
-  .faq-inner {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-
-  .faq-inner h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 400;
-    color: var(--texte);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  details {
-    border-bottom: 1px solid rgba(107,62,42,0.12);
-    padding: 20px 0;
-  }
-
-  summary {
-    cursor: pointer;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--texte);
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-  }
-
-  summary::-webkit-details-marker { display: none; }
-
-  summary::after {
-    content: '+';
-    font-size: 1.4rem;
-    color: var(--miel);
+    font-size: 0.76rem;
+    margin-bottom: 8px;
     font-weight: 300;
-    flex-shrink: 0;
-    line-height: 1;
-    transition: transform 0.2s;
-  }
+}
 
-  details[open] summary::after {
-    transform: rotate(45deg);
-  }
+.footer-col a:hover { color: var(--accent); }
 
-  details p {
-    margin-top: 14px;
-    font-size: 15px;
-    color: var(--texte-doux);
-    font-weight: 300;
-    line-height: 1.7;
-  }
+@media(max-width:768px) {
+    .footer-columns { grid-template-columns: 1fr 1fr; text-align: center; }
+}
+
+@media(max-width:520px) {
+    .nav-links { overflow-x:auto; max-width: 68vw; padding-bottom: 4px; }
+    .footer-columns { grid-template-columns: 1fr; }
+}
+
+@media(max-width:768px) {
+    nav { padding:0 20px; }
+    .nav-links { gap:14px; }
+
+    .section,
+    .section-alt,
+    .lien-section,
+    .cta-section {
+        padding:60px 20px;
+    }
+
+    .about-photo {
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:22px;
+    }
+
+    .about-photo img {
+        max-width:100%;
+    }
+
+    .photo-caption {
+        text-align:center;
+        font-size:0.92rem;
+    }
+
+    .valeurs-grid {
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
-<body>
-<div style="padding:20px 30px 0;">
-    <a href="index.html"
-       style="color:#C4956A;text-decoration:none;font-size:0.9rem;font-weight:500;">
-        ← Retour à Terra Kaya
-    </a>
-</div>
-<!-- ── HERO ── -->
-<section class="hero">
-  <p class="hero-eyebrow">Terra Kaya · Norkaya · Produit au nord Bénin</p>
-  <h1>Le beurre de mangue,<br><em>un indispensable du quotidien</em><br>né du cœur du fruit</h1>
-  <p class="hero-sub">Extrait à froid de l'amande du noyau de mangue, ce beurre végétal brut concentre tout ce que la nature a de plus nourrissant pour la peau et les cheveux.</p>
-  </div>
-</section>
 
-<!-- ── SOMMAIRE ── -->
-<nav class="sommaire" aria-label="Sommaire">
-  <div class="sommaire-inner">
-    <span class="sommaire-label">Aller à</span>
-    <div class="sommaire-links">
-      <a href="#peau" class="sommaire-link">
-        <span class="sommaire-icon">🌿</span>
-        <span>Peau</span>
-      </a>
-      <a href="#cheveux" class="sommaire-link">
-        <span class="sommaire-icon">✨</span>
-        <span>Cheveux</span>
-      </a>
-      <a href="#bebe" class="sommaire-link">
-        <span class="sommaire-icon">👶</span>
-        <span>Bébé & enfant</span>
-      </a>
-      <a href="#grossesse" class="sommaire-link">
-        <span class="sommaire-icon">🤰</span>
-        <span>Grossesse</span>
-      </a>
-      <a href="#sport" class="sommaire-link">
-        <span class="sommaire-icon">🏃</span>
-        <span>Sportif·ve·s</span>
-      </a>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">Terra <em>Kaya</em></a>
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#produit">Beurre de mangue</a>
+        <a href="quesiah.html">Savons Koto</a>
+        <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
+        <a href="about.html" class="active">À propos</a>
     </div>
-  </div>
 </nav>
 
-<!-- ── INTRO ── -->
-<section class="intro">
-  <h2>Un beurre végétal d'exception, ancré dans un territoire</h2>
-  <p>Le beurre de mangue Terra Kaya est produit artisanalement au nord du Bénin, par des femmes qui perpétuent un savoir-faire ancestral. Non raffiné, non désodorisé, pressé à froid : il conserve intactes toutes ses molécules actives — acides gras, phytostérols, polyphénols.</p>
-  <div class="photo-inline">
-    <div class="photo-placeholder">
-    <img src="mangues-benin.jpeg"
-         alt="Mangues cultivées au Bénin"
-         style="max-width:700px;width:100%;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,0.08);">
-</div>
-      <span class="origine">
-    <span class="origine-dot"></span>
-    Mangues cultivées et transformées dans le nord Bénin · Agriculture familiale
-  </span>
-    </div>
-  </div>
-</section>
-
-<!-- ── COMPOSITION ── -->
-<section class="compo-section">
-  <div class="compo-inner">
-    <span class="section-label">Composition</span>
-    <h2>Ce que contient le beurre de mangue</h2>
-    <div class="compo-grid">
-      <div class="compo-card">
-        <div class="type">Acide gras mono-insaturé</div>
-        <div class="acide">Acide oléique · Oméga 9</div>
-        <p>Principale molécule structurante du film hydrolipidique cutané. Nourrit en profondeur, renforce la barrière de la peau et pénètre la fibre capillaire pour la lisser.</p>
-      </div>
-      <div class="compo-card">
-        <div class="type">Acide gras poly-insaturé</div>
-        <div class="acide">Acide linoléique · Oméga 6</div>
-        <p>Acide gras essentiel que le corps ne synthétise pas. Participe activement à la réparation cellulaire, calme les inflammations et rééquilibre les peaux sensibles ou à tendance acnéique.</p>
-      </div>
-      <div class="compo-card">
-        <div class="type">Acides gras saturés</div>
-        <div class="acide">Acide stéarique & palmitique</div>
-        <p>Donnent au beurre sa texture solide et fondante. Forment un film protecteur à la surface de la peau, retiennent l'eau et favorisent la souplesse sur la durée.</p>
-      </div>
-      <div class="compo-card">
-        <div class="type">Micronutriments</div>
-        <div class="acide">Phytostérols & polyphénols</div>
-        <p>Les phytostérols apaisent et régénèrent les peaux irritées ; les polyphénols, puissants antioxydants, neutralisent les radicaux libres responsables du vieillissement cutané.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── PEAU ── -->
-<section id="peau" class="bienfait-block">
-  <div class="bienfait-header">
-    <div class="bienfait-icon icon-peau">🌿</div>
-    <div class="bienfait-title-wrap">
-      <span class="section-label">Bienfaits</span>
-      <h2>Pour la peau</h2>
-      <p class="subtitle">Visage · Corps · Mains · Lèvres</p>
-    </div>
-  </div>
-  <div class="bienfait-body">
-    <div class="bienfait-point">
-      <h3>Hydratation profonde et durable</h3>
-      <p>Grâce à sa richesse en acides gras, le beurre de mangue reconstitue le film hydrolipidique de la peau et limite la perte insensible en eau. Résultat : une peau satinée, souple, confortable plusieurs heures après application.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Soin des peaux sèches et déshydratées</h3>
-      <p>Talons craquelés, coudes rugueux, mains agressées par le froid ou les produits ménagers : le beurre de mangue répare et adoucit en profondeur. Une noix suffit, réchauffée dans les paumes, pour un résultat immédiat.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Action anti-âge & antioxydante</h3>
-      <p>Les polyphénols du beurre de mangue aident à protéger la peau des effets du stress oxydatif, favorisé par la pollution, le froid et le soleil. La peau conserve un aspect lumineux et une bonne tenue dans le temps.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Apaisement des irritations</h3>
-      <p>En cas de coup de soleil, d'eczéma léger, de rougeur ou d'irritation cutanée, le beurre de mangue forme un film protecteur et apaisant. Ses propriétés anti-inflammatoires naturelles calment rapidement les sensations d'inconfort.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Soin des lèvres et des mains</h3>
-      <p>Sa texture fondante et non grasse en fait un baume parfait pour les lèvres sèches et les mains abîmées. Il peut s'utiliser pur ou mélangé à un peu de miel pour un masque baume exfoliant maison.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Prévention des vergetures</h3>
-      <p>Appliqué régulièrement en massage sur le ventre, les cuisses et les seins, il améliore l'élasticité cutanée et réduit le risque d'apparition des vergetures lors des phases de croissance rapide.</p>
-    </div>
-  </div>
-  <div class="conseil-box">
-    <div class="conseil-label">Conseil d'utilisation · Peau</div>
-    <p>Prélevez une noix de beurre, <strong>faites-la fondre entre vos paumes</strong> et massez en mouvements circulaires. Sur le visage, appliquez en soin de nuit ou en complément de votre routine habituelle. Pour les zones très sèches (talons, coudes), couvrez d'une chaussette ou d'un gant de coton après application et laissez agir une heure.</p>
-  </div>
-</section>
-
-<!-- ── CHEVEUX ── -->
-<section id="cheveux" class="bienfait-block alt">
-  <div class="bienfait-inner">
-    <div class="bienfait-header">
-      <div class="bienfait-icon icon-cheveux">✨</div>
-      <div class="bienfait-title-wrap">
-        <span class="section-label">Bienfaits</span>
-        <h2>Pour les cheveux</h2>
-        <p class="subtitle">Cheveux secs · Bouclés · Crépus · Fragilisés</p>
-      </div>
-    </div>
-    <div class="bienfait-body">
-      <div class="bienfait-point">
-        <h3>Nourriture intense des fibres capillaires</h3>
-        <p>L'acide oléique pénètre au cœur de la fibre capillaire et restaure les lipides manquants. Les cheveux retrouvent souplesse, brillance et résistance à la casse — idéal pour les chevelures naturelles, bouclées ou crépues.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Renforcement de la cuticule</h3>
-        <p>En lissant les écailles du cheveu (cuticule), le beurre de mangue réduit les frisottis et apporte un éclat visible. Les longueurs paraissent plus denses et mieux définies.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Traitement des pointes sèches et fourchues</h3>
-        <p>Appliqué pur sur les pointes, il répare les fourches existantes et prévient leur apparition. Quelques gouttes fondues suffisent pour sceller les longueurs et donner un fini soyeux.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Masque capillaire en profondeur</h3>
-        <p>En masque avant-shampoing (bain d'huile), il restaure la structure du cheveu en 30 minutes. Appliquez sur cheveux secs de la racine aux pointes, couvrez d'une serviette chaude, puis shampouinez normalement.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Booster pour vos soins habituels</h3>
-        <p>Une petite quantité fondue peut être incorporée à votre après-shampoing, masque ou crème coiffante pour en démultiplier les effets nourrissants. Il se marie particulièrement bien avec l'huile de ricin pour stimuler la pousse.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Sérum sans rinçage</h3>
-        <p>Sur cheveux humides, une infime quantité (la taille d'un grain de riz pour les cheveux fins) suffit comme soin sans rinçage pour dompter les frisottis et protéger des agressions thermiques avant un brushing.</p>
-      </div>
-    </div>
-    <div class="conseil-box">
-      <div class="conseil-label">Conseil d'utilisation · Cheveux</div>
-      <p>Pour un bain d'huile : appliquez sur <strong>cheveux secs toute la longueur</strong>, enveloppez dans une serviette chauffée quelques secondes au micro-ondes. Laissez 30 à 45 minutes, puis shampouinez deux fois si nécessaire. À faire une fois par semaine pour des cheveux très secs, toutes les 2 semaines en entretien.</p>
-    </div>
- <div style="text-align:center;margin:60px 20px;">
-    <img src="femme-mangue.jpeg"
-         alt="Femme tenant une mangue"
-         style="max-width:250px;width:100%;border-radius:24px;box-shadow:0 15px 35px rgba(0,0,0,0.08);">
-</div>
-</div>
-</div>
-</section>
-
-<!-- ── BÉBÉ ── -->
-<section id="bebe" class="bienfait-block">
-  <div class="bienfait-header">
-    <div class="bienfait-icon icon-bebe">👶</div>
-    <div class="bienfait-title-wrap">
-      <span class="section-label">Bienfaits</span>
-      <h2>Pour les bébés et les enfants</h2>
-      <p class="subtitle">Dès la naissance · Sans huile essentielle · Sans perturbateur endocrinien</p>
-    </div>
-  </div>
-  <div class="bienfait-body">
-    <div class="bienfait-point">
-      <h3>Soin de la peau du nourrisson</h3>
-      <p>100 % naturel, sans huile essentielle ni conservateur synthétique, le beurre de mangue Terra Kaya peut s'utiliser dès la naissance pour nourrir et adoucir la peau fine et réactive du bébé, comme le ferait un beurre de karité.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Apaisement des rougeurs et irritations</h3>
-      <p>Fesses irritées, érythèmes fessiers légers, peau qui tiraille après le bain : le beurre de mangue forme une couche protectrice douce qui soulage l'inconfort sans agresser l'épiderme délicat du tout-petit.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Hydratation du cuir chevelu des enfants</h3>
-      <p>Les croûtes de lait chez les nourrissons ou les cuirs chevelus secs chez les enfants plus grands peuvent être traités avec une petite quantité appliquée en massage doux. Laissez agir avant le bain, puis rincez à l'eau tiède.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Un soin pour toute la famille</h3>
-      <p>Un seul produit, utilisable par toute la famille. Sa composition ultra-simple évite les risques d'allergie et d'interaction. Pratique pour les familles qui cherchent à réduire le nombre de produits dans la salle de bain.</p>
-    </div>
-  </div>
-  <div class="conseil-box">
-    <div class="conseil-label">Précautions · Bébé</div>
-    <p>Tenir hors de portée des enfants. <strong>Ne pas avaler.</strong> Éviter le contact avec les yeux. En cas de réaction cutanée inhabituelle, cessez l'application et consultez un professionnel de santé. Comme pour tout nouveau soin, testez d'abord sur une petite zone de peau.</p>
-  </div>
-</section>
-
-<!-- ── GROSSESSE ── -->
-<section id="grossesse" class="bienfait-block alt">
-  <div class="bienfait-inner">
-    <div class="bienfait-header">
-      <div class="bienfait-icon icon-grossesse">🤰</div>
-      <div class="bienfait-title-wrap">
-        <span class="section-label">Bienfaits</span>
-        <h2>Pendant et après la grossesse</h2>
-        <p class="subtitle">Compatible grossesse & allaitement · Sans huile essentielle</p>
-      </div>
-    </div>
-    <div class="bienfait-body">
-      <div class="bienfait-point">
-        <h3>Prévention des vergetures</h3>
-        <p>C'est sans doute l'usage le plus recherché par les femmes enceintes. Appliqué deux fois par jour en massage sur le ventre, les seins, les hanches et les cuisses, il aide à préserver l'élasticité cutanée et contribue à maintenir la peau souple et confortable pendant toute la durée de la grossesse.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Soulagement des tiraillements</h3>
-        <p>À mesure que la peau s'étire, les sensations de tiraillement et de démangeaison peuvent devenir intenses. Le beurre de mangue apaise et adoucit l'épiderme grâce à ses propriétés émollientes, pour un confort retrouvé au quotidien.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Soin des seins pendant l'allaitement</h3>
-        <p>Les mamelons peuvent devenir très sensibles ou craquelés en début d'allaitement. Le beurre de mangue, sans huile essentielle, peut être appliqué comme baume réparateur entre les tétées. Il est inoffensif pour le bébé si une trace reste sur le sein.</p>
-      </div>
-      <div class="bienfait-point">
-        <h3>Post-partum : atténuation des vergetures</h3>
-        <p>Après l'accouchement, il continue d'agir sur les vergetures existantes en nourrissant la peau en profondeur et en aidant à maintenir son confort et sa souplesse. L'application régulière, sur plusieurs semaines, permet de conserver une peau bien hydratée et de bonne apparence.</p>
-      </div>
-    </div>
-    <div class="conseil-box">
-      <div class="conseil-label">Pourquoi le beurre de mangue est sûr pendant la grossesse</div>
-      <p>Contrairement à de nombreuses huiles essentielles ou actifs cosmétiques à éviter pendant la grossesse, le beurre de mangue Terra Kaya est <strong>100 % brut, non raffiné, sans huile essentielle, sans conservateur synthétique et sans perturbateur endocrinien</strong>. Sa composition simple, un seul ingrédient (INCI : <em>Mangifera indica Seed Butter</em>), le rend compatible avec les neuf mois de grossesse et l'allaitement.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── SPORTIFS ── -->
-<section id="sport" class="bienfait-block">
-  <div class="bienfait-header">
-    <div class="bienfait-icon icon-sport">🏃</div>
-    <div class="bienfait-title-wrap">
-      <span class="section-label">Bienfaits</span>
-      <h2>Pour les sportif·ve·s</h2>
-      <p class="subtitle">Récupération · Protection · Soin après effort</p>
-    </div>
-  </div>
-  <div class="bienfait-body">
-    <div class="bienfait-point">
-      <h3>Récupération musculaire par le massage</h3>
-      <p>Riche en acides gras, le beurre de mangue est un excellent support de massage post-effort. Sa texture fondante facilite les mouvements et contribue à détendre la peau autour des zones sollicitées après un entraînement intense.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Protection contre les frottements</h3>
-      <p>Coureur·se·s, cyclistes, nageur·se·s : les zones de frottement répété (cuisses, aisselles, plantes de pied) bénéficient d'une couche protectrice naturelle qui limite les irritations et les ampoules à l'effort.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Soin des pieds et des talons</h3>
-      <p>L'effort sportif durcit les pieds et craquelle les talons. Un massage régulier au beurre de mangue le soir, suivi d'une chaussette de coton, restaure le confort en quelques jours.</p>
-    </div>
-    <div class="bienfait-point">
-      <h3>Réparation des lèvres et de la peau exposée</h3>
-      <p>Sport en extérieur, UV, vent, froid : la peau du visage et les lèvres encaissent beaucoup. Le beurre de mangue offre une protection naturelle et répare les micro-agressions cutanées accumulées entre les séances.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── MODES D'EMPLOI ── -->
-<section class="usage-strip">
-  <div class="usage-inner">
-    <span class="section-label" style="text-align:center;display:block;">Modes d'utilisation</span>
-    <h2>Comment l'utiliser au quotidien</h2>
-    <div class="usage-grid">
-      <div class="usage-card">
-        <div class="usage-title">Pur, sur la peau</div>
-        <div class="usage-dose">Noix de beurre (1–2 g)</div>
-        <p>Faites fondre entre vos paumes et massez sur les zones sèches. Idéal matin après la douche ou le soir en soin de nuit sur le corps.</p>
-      </div>
-      <div class="usage-card">
-        <div class="usage-title">Masque capillaire</div>
-        <div class="usage-dose">1 à 2 c. à soupe</div>
-        <p>Appliquez sur cheveux secs de la racine aux pointes. Couvrez d'une serviette chaude. Laissez 30–45 min, puis shampouinez.</p>
-      </div>
-      <div class="usage-card">
-        <div class="usage-title">Booster capillaire</div>
-        <div class="usage-dose">½ c. à café</div>
-        <p>Fondu, mélangez-le directement à votre après-shampoing, masque ou crème coiffante habituel·le pour décupler leurs effets.</p>
-      </div>
-      <div class="usage-card">
-        <div class="usage-title">Sérum anti-frisottis</div>
-        <div class="usage-dose">Grain de riz (cheveux fins)</div>
-        <p>Sur cheveux humides, travaillez une infime quantité des longueurs aux pointes pour sceller l'humidité et dompter les frisottis.</p>
-      </div>
-      <div class="usage-card">
-        <div class="usage-title">Baume lèvres & mains</div>
-        <div class="usage-dose">Infime quantité</div>
-        <p>Prélevez une pointe du bout du doigt, réchauffez, appliquez sur les lèvres ou les cuticules. Fonctionne aussi en gommage avec un peu de sucre.</p>
-      </div>
-      <div class="usage-card">
-        <div class="usage-title">En émulsion DIY</div>
-        <div class="usage-dose">Dosage libre</div>
-        <p>Le beurre de mangue se mélange à merveille dans vos préparations maison : body butter, crème pour bébé, baume anti-vergetures.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CONSERVATION ── -->
-<section class="conservation">
-  <span class="section-label">Conservation</span>
-  <h2>Prendre soin de son beurre de mangue</h2>
-  <p>Non raffiné et non conservé chimiquement, le beurre de mangue Terra Kaya est un produit vivant. Quelques précautions simples suffisent pour le conserver dans les meilleures conditions.</p>
-  <p>Conservez-le à l'abri de la lumière directe et de la chaleur, dans son contenant hermétique. Évitez de l'introduire dans la salle de bain trop humide si vous n'en utilisez pas fréquemment.</p>
-  <div class="note">
-    🌡️ <strong>Le beurre de mangue fond naturellement à partir de 20 °C</strong> — exactement comme l'huile de coco. Ce changement de texture est tout à fait normal et n'altère en rien ses propriétés. S'il s'est liquéfié, placez-le au réfrigérateur pour le resolidifier, ou utilisez-le fondu directement sur vos longueurs.
-  </div>
-</section>
-
-<!-- ── FAQ ── -->
-<section class="faq-section">
-  <div class="faq-inner">
-    <span class="section-label" style="text-align:center;display:block;">FAQ</span>
-    <h2>Questions fréquentes</h2>
-
-    <details>
-      <summary>Le beurre de mangue est-il adapté à tous les types de peau ?</summary>
-      <p>Oui, dans l'ensemble. Sa richesse en acide linoléique (Oméga 6) le rend apaisant même sur les peaux sensibles. Les peaux très grasses ou à tendance acnéique devraient cependant l'utiliser avec parcimonie sur le visage, ou le réserver au corps et aux cheveux.</p>
-    </details>
-
-    <details>
-      <summary>Peut-on l'utiliser sur bébé dès la naissance ?</summary>
-      <p>Oui. Sa formulation ultra-simple (un seul ingrédient, sans huile essentielle ni conservateur) le rend compatible avec les peaux les plus sensibles, y compris celle des nouveau-nés. Comme pour tout nouveau soin, testez d'abord sur une petite zone.</p>
-    </details>
-
-    <details>
-      <summary>Mon beurre s'est liquéfié, est-ce normal ?</summary>
-      <p>Tout à fait. Le beurre de mangue change naturellement d'état autour de 20 °C, exactement comme l'huile de coco. Ses propriétés restent intactes. Si vous préférez une texture solide, placez-le au réfrigérateur quelques minutes avant usage.</p>
-    </details>
-
-    <details>
-      <summary>Peut-on l'utiliser enceinte ou pendant l'allaitement ?</summary>
-      <p>Oui. Terra Kaya est 100 % brut, sans huile essentielle, sans perturbateur endocrinien. Sa composition (INCI : <em>Mangifera indica Seed Butter</em>) est compatible avec la grossesse et l'allaitement. En cas de doute, parlez-en à votre sage-femme ou médecin.</p>
-    </details>
-
-    <details>
-      <summary>Avec quoi peut-on le mélanger ?</summary>
-      <p>Il s'associe facilement à d'autres beurres végétaux (karité, cacao), aux huiles végétales (avocat, ricin, argan), à l'eau florale de rose ou à l'aloé vera gel pour des préparations maison. Pour les cheveux, l'huile de ricin et le beurre de mangue forment un duo nourrissant et stimulant reconnu.</p>
-    </details>
-
-    <details>
-      <summary>Quelle est la durée de vie du produit ?</summary>
-      <p>Bien conservé (à l'abri de la lumière, de l'humidité et des variations de température extrêmes), le beurre de mangue se conserve généralement 12 à 18 mois. Fiez-vous à la date de durabilité minimale indiquée sur votre pot Terra Kaya.</p>
-    </details>
-
-    <details>
-      <summary>Quelle est la différence entre le beurre de mangue et le beurre de karité ?</summary>
-      <p>Le beurre de mangue est généralement plus léger et pénètre plus rapidement dans la peau. Le beurre de karité, plus riche, offre une protection plus occlusive. Le choix dépend des besoins et des préférences de chacun.</p>
-    </details>
-
-    <details>
-      <summary>Le beurre de mangue convient-il aux cheveux fins ?</summary>
-      <p>Oui, à condition d'être utilisé en petite quantité. Une noisette suffit pour nourrir les longueurs sans les alourdir.</p>
-    </details>
-
-    <details>
-      <summary>Le beurre de mangue est-il comédogène ?</summary>
-      <p>Le beurre de mangue est généralement bien toléré. Toutefois, chaque peau étant différente, il est conseillé d'effectuer un test préalable, notamment sur les peaux à tendance acnéique.</p>
-    </details>
-
-    <details>
-      <summary>Quelle quantité utiliser ?</summary>
-      <p>Une petite quantité suffit. Le beurre fond au contact de la peau et s'étale facilement.</p>
-    </details>
-
-    <details>
-      <summary>Pourquoi mon beurre de mangue a-t-il une texture différente selon les saisons ?</summary>
-      <p>Les variations de température peuvent modifier sa texture sans altérer sa qualité ni ses propriétés.</p>
-    </details>
-
-    <details>
-      <summary>Quelle est l'odeur du beurre de mangue Terra Kaya ?</summary>
-      <p>Contrairement à de nombreux beurres de mangue bruts, Terra Kaya présente une légère odeur naturellement fruitée, caractéristique de notre procédé de fabrication artisanal.</p>
-    </details>
-
-    <details>
-      <summary>Le beurre de mangue peut-il être utilisé sur les cheveux des enfants ?</summary>
-      <p>Oui, en petite quantité, il peut être utilisé pour nourrir les longueurs et faciliter le coiffage des cheveux secs.</p>
-    </details>
-
-    <details>
-      <summary>Pourquoi choisir un beurre de mangue produit au Bénin ?</summary>
-      <p>Terra Kaya valorise un savoir-faire artisanal transmis de génération en génération et soutient les productrices locales du nord Bénin.</p>
-    </details>
-  </div>
-</section>
-  <div style="text-align:center;margin:80px 20px;">
-   
+<div class="hero">
+    <div class="hero-eyebrow">Notre histoire</div>
+    <h1 class="hero-title">Un projet né<br><em>du cœur</em></h1>
+    <p class="hero-sub">
+        Norkaya, c'est l'histoire d'un lien profond entre deux cultures,
+        deux continents et une passion pour les trésors naturels du Bénin.
+    </p>
 </div>
 
-<!-- ── CTA ── -->
-<section class="cta-section">
-  <div class="photo-cta">
-    <div class="photo-placeholder photo-placeholder--cta">
-<img src="Pot-terra-kaya.png" alt="Beurre de mangue Terra Kaya">      <div class="placeholder-text">📸 Photo produit CTA</div>
-  </div>
-  <h2>Un soin <em>né au Bénin,</em><br>fait pour durer</h2>
-  <p>Terra Kaya — beurre de mangue artisanal, produit dans le nord Bénin par des productrices locales.</p>
-  <ahref="index.html#produit" class="btn-miel">Découvrir Terra Kaya</a>
-</section>
+<div class="section">
+    <div class="section-eyebrow">Nos origines</div>
+    <h2 class="section-title">Pourquoi j'ai lancé<br><em>ce projet</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="section-text">
+        Terra Kaya est née d'un ancrage profond, intime et familial.
+        Le Bénin est le pays d'origine de mon fils et de mon compagnon —
+        un pays qui est devenu au fil du temps mon pays adoptif.
+        Il fait partie de nous, de notre quotidien et de notre histoire.
+    </p>
+
+    <p class="section-text">
+        J'ai eu envie de célébrer ces cultures, de mettre en lumière nos
+        histoires et nos savoir-faire, et de permettre aux personnes
+        afro-descendantes d'avoir accès à des produits de chez elles,
+        fabriqués avec respect, authenticité et exigence.
+    </p>
+
+    <p class="section-text">
+        À travers Terra Kaya, je souhaite aussi faire découvrir un trésor
+        encore trop peu connu en France : le beurre de mangue artisanal du Bénin,
+        un soin naturel apprécié pour nourrir la peau sèche et prendre soin des
+        cheveux secs, bouclés, frisés ou crépus.
+    </p>
+
+    <div class="about-photo">
+        <img src="sothe.PNG"
+             alt="Fondatrice de Terra Kaya et son fils, marque de beurre de mangue artisanal du Bénin">
+        <p class="photo-caption">
+            Terra Kaya est aussi une histoire de transmission. À travers cette marque,
+            je souhaite transmettre à mon fils l'importance de nos racines, de notre
+            histoire et des savoir-faire qui nous relient.
+        </p>
+    </div>
+</div>
+
+<div class="lien-section">
+    <div class="lien-inner">
+        <div class="section-eyebrow">Deux cultures, un lien</div>
+        <div class="lien-flags">🇲🇶 🤝 🇧🇯</div>
+        <h2 class="lien-title">Martinique <em>&</em> Bénin</h2>
+        <p class="lien-text">
+            Il existe un lien puissant entre la Martinique et le Bénin, hérité
+            de notre histoire commune, des échanges culturels, spirituels et
+            économiques qui renaissent aujourd'hui. Norkaya s'inscrit dans cette
+            dynamique de transmission, de fierté et de valorisation des richesses
+            naturelles africaines.
+        </p>
+    </div>
+</div>
+
+<div class="section-alt">
+    <div class="section-alt-inner">
+        <div class="section-eyebrow">Ce qui nous définit</div>
+        <h2 class="section-title">Nos <em>engagements</em></h2>
+        <div class="section-divider"></div>
+
+        <div class="valeurs-grid">
+            <div class="valeur-card">
+                <div class="valeur-icon">👩🏾‍🌾</div>
+                <div class="valeur-title">Artisanat féminin</div>
+                <p class="valeur-text">
+                    Nous travaillons avec une productrice béninoise au nord du Bénin,
+                    qui fabrique à la main selon des techniques traditionnelles.
+                </p>
+            </div>
+
+            <div class="valeur-card">
+                <div class="valeur-icon">🌍</div>
+                <div class="valeur-title">Impact local</div>
+                <p class="valeur-text">
+                    Chaque pot acheté soutient une filière artisanale locale
+                    et participe à la valorisation des ressources du Bénin.
+                </p>
+            </div>
+
+            <div class="valeur-card">
+                <div class="valeur-icon">🌱</div>
+                <div class="valeur-title">Soin naturel</div>
+                <p class="valeur-text">
+                    Notre beurre de mangue est un soin naturel, simple et polyvalent,
+                    pensé pour la peau, le corps et les cheveux.
+                </p>
+            </div>
+
+            <div class="valeur-card">
+                <div class="valeur-icon">🤝</div>
+                <div class="valeur-title">Commerce responsable</div>
+                <p class="valeur-text">
+                    Nous privilégions une relation directe, respectueuse et équitable
+                    avec les personnes qui participent à la production.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-eyebrow">Notre produit phare</div>
+    <h2 class="section-title">Pourquoi le beurre<br><em>de mangue du Bénin ?</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="section-text">
+        Le beurre de mangue Terra Kaya est fabriqué à partir du noyau de la mangue,
+        selon un savoir-faire traditionnel. Naturellement riche et nourrissant,
+        il est apprécié pour prendre soin des peaux sèches, sensibles, ainsi que
+        des cheveux secs, bouclés, frisés ou crépus.
+    </p>
+
+    <p class="section-text">
+        Ce beurre de mangue artisanal incarne tout ce que nous souhaitons transmettre :
+        un produit naturel, une histoire humaine forte, une origine précieuse et un
+        soin authentique inspiré des richesses du Bénin.
+    </p>
+
+    <div class="about-photo">
+        <img src="pot.png"
+             alt="Pot de beurre de mangue artisanal Terra Kaya, soin naturel pour la peau et les cheveux">
+        <p class="photo-caption">
+            Le beurre de mangue Terra Kaya est un soin naturel polyvalent qui nourrit,
+            protège et sublime la peau et les cheveux.
+        </p>
+    </div>
+
+    <div class="mango-box">
+        <img src="mangue.png"
+             alt="Mango, la mascotte Terra Kaya">
+
+        <h3>Fais connaissance avec Mango</h3>
+
+        <p>
+            Mango est la petite mascotte de Terra Kaya. Curieuse, joyeuse et toujours
+            prête à partager ses découvertes, elle t'accompagne pour explorer les
+            secrets du beurre de mangue et ses nombreux bienfaits pour la peau et les cheveux.
+        </p>
+
+        <p style="margin-top:20px;color:#C4956A;font-style:italic;font-weight:500;">
+            « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
+        </p>
+
+        <p style="margin-top:15px;font-size:0.9rem;color:#6B5B50;">
+            📱 Retrouve Mango sur TikTok :
+            <strong>@norkaya1</strong>
+        </p>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h2 class="cta-title">Rejoins l'aventure<br><em>Terra Kaya</em></h2>
+    <p class="cta-text">
+        Le beurre de mangue Terra Kaya est disponible à la commande en ligne. Retrouvez notre produit phare et complétez votre routine naturelle.
+    </p>
+    <a href="https://buy.stripe.com/5kQ9ANca91oL68Y3xp1wY06" target="_blank" rel="noopener" class="cta-btn">Acheter le beurre de mangue 🥭</a>
+</div>
+
+<footer>
+    <div class="footer-logo">Terra Kaya · by Norkaya</div>
+
+    <div class="footer-columns">
+        <div class="footer-col">
+            <div class="footer-col-title">Boutique</div>
+            <a href="index.html#produit">Beurre de mangue</a>
+            <a href="quesiah.html">Savons Koto</a>
+            <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Norkaya</div>
+            <a href="about.html">À propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Commandes</div>
+            <a href="livraison-points-de-vente.html">Livraison & Points de vente</a>
+            <a href="retours-remboursements.html">Retours & remboursements</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Légal</div>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="cgv.html">CGV</a>
+            <a href="confidentialite.html">Confidentialité</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">© 2026 Norkaya — Terra Kaya · Tous droits réservés</div>
+</footer>
 
 </body>
-<script>
-  const sections = ['peau','cheveux','bebe','grossesse','sport'];
-  const links = {};
-  sections.forEach(id => {
-    links[id] = document.querySelector(`.sommaire-link[href="#${id}"]`);
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const id = entry.target.id;
-      if (links[id]) {
-        links[id].classList.toggle('active', entry.isIntersecting);
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
-  });
-</script>
 </html>
