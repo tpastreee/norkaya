@@ -657,15 +657,17 @@
             background: var(--white);
         }
         .produit-fiche-inner {
-            max-width: 960px;
+            max-width: 960px;!important;
+            width: 100%
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: minimax (0,1fr) minmax(0,1fr);
             gap: 60px;
             align-items: start;
         }
         .fiche-galerie { display: flex; flex-direction: column; gap: 12px; }
         .fiche-photo-main {
+            width: 100%; max-width: 450PX;
             border-radius: 16px; overflow: hidden;
             aspect-ratio: 1; background: var(--bg-cream);
         }
