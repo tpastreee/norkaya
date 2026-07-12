@@ -414,9 +414,11 @@
         .produit-fiche-inner {
             max-width: 860px;
             margin: 0 auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             flex-direction: column;
-            gap: 48px;
+            gap: 60px
+            align-items: start;
         }
 
         .fiche-header { text-align: center; }
