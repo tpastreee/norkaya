@@ -809,6 +809,15 @@
 
 </style>
 </head>
+  <script>
+window.SnipcartSettings = {
+  publicApiKey: "M2YzOThkMTktNDM0Zi00YTM0LWJjNTEtMzczYzIyNGFjMWY1NjM5MTk3MTE1MzkxOTEyMzY0"
+};
+</script>
+
+<script async src="https://cdn.snipcart.com/themes/v3.5.0/default/snipcart.js"></script>
+
+<div hidden id="snipcart"></div>
 <body>
 <nav class="site-nav">
   <a href="index.html" class="site-nav-logo">Terra <em>Kaya</em></a>
@@ -819,6 +828,9 @@
     <a href="bienfaits-beurre-mangue.html" class="active">Bienfaits</a>
     <a href="about.html">À propos</a>
   </div>
+  <a href="#" class="snipcart-checkout" style="text-decoration:none;color:inherit;">
+    🛒 <span class="snipcart-items-count">0</span>
+</a>
 </nav>
 <!-- ── HERO ── -->
 <section class="hero">
@@ -1232,11 +1244,25 @@
 <section class="cta-section">
   <div class="photo-cta">
     <div class="photo-placeholder photo-placeholder--cta">
-<img src="Pot-terra-kaya.png" alt="Beurre de mangue Terra Kaya">      <div class="placeholder-text">📸 Photo produit CTA</div>
+      <img src="Pot-terra-kaya.png" alt="Beurre de mangue Terra Kaya">
+    </div>
   </div>
+
   <h2>Un soin <em>né au Bénin,</em><br>fait pour durer</h2>
-  <p>Terra Kaya — beurre de mangue artisanal, produit dans le nord Bénin par des productrices locales.</p>
-  <a href="https://buy.stripe.com/5kQ9ANca91oL68Y3xp1wY06" target="_blank" rel="noopener" class="btn-miel">Acheter le beurre de mangue</a>
+
+  <p>Terra Kaya — beurre de mangue artisanal, produit dans le nord du Bénin par des productrices locales.</p>
+
+  <a
+    href="#"
+    class="btn-miel snipcart-add-item"
+    data-item-id="beurre-mangue-100ml"
+    data-item-price="11.00"
+    data-item-url="https://norkaya.fr/index.html#produit"
+    data-item-name="Beurre de mangue Norkaya"
+    data-item-image="https://norkaya.fr/Pot-terra-kaya.png"
+    data-item-description="Beurre de mangue artisanal produit au Bénin. Nourrit et protège la peau ainsi que les cheveux.">
+    Ajouter au panier • 11 €
+  </a>
 </section>
 
 <footer class="site-footer">
