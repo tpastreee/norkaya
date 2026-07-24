@@ -980,10 +980,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
     
-        @media (max-width: 820px) {
-            nav { padding: 0 18px !important; overflow-x: auto; }
-            nav > div { gap: 18px !important; min-width: max-content; }
-            footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; text-align: center !important; }
+      @media (max-width: 820px) {
+
+    nav {
+        padding: 0 18px !important;
+        overflow: visible !important;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: #2B1810;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .desktop-menu {
+        display: none !important;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center !important;
+        gap: 0 !important;
+        background: #FDF9F4;
+        padding: 14px 20px 22px;
+        border-bottom: 1px solid rgba(196,149,106,0.25);
+        box-shadow: 0 12px 25px rgba(43,24,16,0.12);
+    }
+
+    .desktop-menu.open {
+        display: flex !important;
+    }
+
+    .desktop-menu a {
+        width: 100%;
+        padding: 13px 6px;
+        text-align: center;
+        border-bottom: 1px solid rgba(196,149,106,0.15);
+    }
+}
         }
         @media (max-width: 520px) {
             footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
@@ -1003,22 +1041,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
 <div hidden id="snipcart"></div>
-<nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,250,246,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(196,149,106,0.2);padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;">
-    <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:#2B1810;text-decoration:none;letter-spacing:2px;">Terra <em style="font-style:italic;color:#C4956A;">Kaya</em></a>
-    <div style="display:flex;gap:32px;align-items:center;">
-        <a href="index.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Accueil</a>
-        <a href="index.html#produit" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Beurre de mangue</a>
-        <a href="quesiah.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Savons Koto</a>
-        <a href="bienfaits-beurre-mangue.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Bienfaits</a>
-        <a href="about.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#C4956A;text-decoration:none;">À propos</a>
-        <a href="contact.html" style="font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:#2B1810;text-decoration:none;">Contact</a>
-        <a href="#" class="snipcart-checkout" style="text-decoration:none;color:inherit;">
-    🛒 <span class="snipcart-items-count">0</span>
-</a>
+<<nav class="main-nav">
+    <a href="index.html" class="nav-logo">
+        Terra <em>Kaya</em>
+    </a>
+
+    <button
+        type="button"
+        class="menu-toggle"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+    <div class="nav-menu" id="navMenu">
+        <a href="index.html">Accueil</a>
+        <a href="index.html#produit">Beurre de mangue</a>
+        <a href="quesiah.html">Savons Koto</a>
+        <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="#" class="snipcart-checkout nav-cart">
+            🛒 Panier
+            <span class="snipcart-items-count">0</span>
+        </a>
     </div>
 </nav>
-<div style="height:64px;"></div>
 
+<div class="nav-spacer"></div>
     <!-- HERO PLEIN ECRAN - Style affiche -->
     <section class="hero">
         <div class="hero-image-bg">
@@ -1352,17 +1405,125 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+/* ============ MENU PRINCIPAL ============ */
 
-@media (max-width: 768px) {
-    .avis-card {
-        flex: 0 0 85%;
-        min-width: 280px;
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 64px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(253, 250, 246, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(196, 149, 106, 0.2);
+}
+
+.nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #2B1810;
+    text-decoration: none;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.nav-logo em {
+    font-style: italic;
+    color: #C4956A;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-menu a {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2B1810;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover {
+    color: #C4956A;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 1;
+    color: #2B1810;
+    cursor: pointer;
+}
+
+.nav-spacer {
+    height: 64px;
+}
+
+@media (max-width: 820px) {
+
+    .main-nav {
+        padding: 0 18px;
     }
 
-    .avis-header h2 {
-        font-size: 1.9rem;
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 20px 18px;
+        background: #FDF9F4;
+        border-bottom: 1px solid rgba(196, 149, 106, 0.25);
+        box-shadow: 0 12px 25px rgba(43, 24, 16, 0.12);
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        padding: 14px 5px;
+        text-align: center;
+        border-bottom: 1px solid rgba(196, 149, 106, 0.15);
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-cart {
+        justify-content: center;
     }
 }
+    
 </style>
 </section>
     <footer>
@@ -1432,5 +1593,26 @@ document.querySelectorAll('.thumb').forEach(thumb => {
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH9DFBB4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    const button = document.querySelector(".menu-toggle");
+    const isOpen = menu.classList.toggle("open");
+
+    button.setAttribute("aria-expanded", isOpen);
+    button.textContent = isOpen ? "✕" : "☰";
+}
+
+document.querySelectorAll("#navMenu a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        const menu = document.getElementById("navMenu");
+        const button = document.querySelector(".menu-toggle");
+
+        menu.classList.remove("open");
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "☰";
+    });
+});
+</script>
 </body>
 </html>
