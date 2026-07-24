@@ -452,7 +452,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             flex-direction: column;
-            gap: 60px
+            gap: 60px;
             align-items: start;
         }
 
@@ -737,7 +737,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width: 100%;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: minimax (0, 1fr) minmax(0, 1fr);
+            grid-template-columns: minmax (0, 1fr) minmax(0, 1fr);
             gap: 60px;
             align-items: start;
         }
@@ -1007,7 +1007,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         cursor: pointer;
     }
 
-    .desktop-menu {
+     .nav-menu {
         display: none !important;
         position: absolute;
         top: 64px;
@@ -1022,18 +1022,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         box-shadow: 0 12px 25px rgba(43,24,16,0.12);
     }
 
-    .desktop-menu.open {
+    .nav-menu.open {
         display: flex !important;
     }
 
-    .desktop-menu a {
+    .nav-menu a {
         width: 100%;
         padding: 13px 6px;
         text-align: center;
         border-bottom: 1px solid rgba(196,149,106,0.15);
     }
 }
-        }
+        
         @media (max-width: 520px) {
             footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
         }
@@ -1052,7 +1052,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
 <div hidden id="snipcart"></div>
-<<nav class="main-nav">
+<nav class="main-nav">
     <a href="index.html" class="nav-logo">
         Terra <em>Kaya</em>
     </a>
