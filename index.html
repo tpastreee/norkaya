@@ -671,11 +671,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding-top: 24px;
         }
 
-        @media (max-width: 768px) {
-            .fiche-photos { grid-template-columns: 1fr 1fr; }
-            .fiche-utilisations { grid-template-columns: 1fr; }
-        }
+  @media (max-width: 768px) {
 
+    /* Réduit la zone occupée par la photo principale */
+    .fiche-photo-main {
+        height: 330px;
+        aspect-ratio: auto;
+    }
+
+    .fiche-photo-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Réduit les miniatures */
+    .fiche-photo-thumbs {
+        justify-content: center;
+    }
+
+    .thumb {
+        width: 60px;
+        height: 60px;
+    }
+
+    .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Réduit l’espace entre la photo et les informations */
+    .produit-fiche-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .fiche-photos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fiche-utilisations {
+        grid-template-columns: 1fr;
+    }
+}
 
         /* ============ FICHE PRODUIT STYLE SHOP ============ */
         .produit-fiche {
