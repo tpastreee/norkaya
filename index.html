@@ -1033,6 +1033,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         @media (max-width: 520px) {
             footer > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
         }
+.snipcart-summary-fees__taxes,
+.snipcart-summary-fees__tax {
+  display: none !important;
+}
 </style>
 </head>
 <body>
@@ -1080,8 +1084,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </a>
     </div>
 </nav>
-
 <div class="nav-spacer"></div>
+    /* Moyens de paiement */
+.payment-methods {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.payment-secure {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #6f6258;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.payment-visa {
+    font-weight: 800;
+    font-size: 20px;
+    font-style: italic;
+    color: #1a1f71;
+}
+
+.payment-mastercard {
+    font-size: 22px;
+    letter-spacing: -8px;
+    padding-right: 8px;
+    color: #eb001b;
+}
+
+.payment-paypal {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 17px;
+    color: #003087;
+}
     <!-- HERO PLEIN ECRAN - Style affiche -->
     <section class="hero">
         <div class="hero-image-bg">
@@ -1160,6 +1204,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   Ajouter au panier · 11,00 €
 </button>
 
+                <div class="payment-methods">
+    <span class="payment-secure">🔒 Paiement sécurisé</span>
+    <div class="payment-logos">
+        <span class="payment-visa">VISA</span>
+        <span class="payment-mastercard">●●</span>
+        <span class="payment-paypal">PayPal</span>
+    </div>
+</div>
                 <div class="fiche-accordeons">
                     <details class="accordeon">
                         <summary>✨ Bienfaits</summary>
