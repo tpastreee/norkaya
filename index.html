@@ -212,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         /* ============ SECTION TAGLINE ============ */
         .tagline-section {
-            padding: 100px 20px;
+            padding: 50px 20px;
             text-align: center;
             background: var(--bg-cream);
         }
@@ -1549,10 +1549,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
     /* PHOTO PRODUIT SUR MOBILE */
-@media (max-width: 768px) {
-    .produit-fiche {
-        padding: 35px 14px !important;
+ @media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 520px;
     }
+
+    .hero-image-bg img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
 
     .fiche-photo-main {
         width: 100%;
