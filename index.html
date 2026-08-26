@@ -1448,11 +1448,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.main-nav.scrolled {
     background: rgba(253, 250, 246, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(196, 149, 106, 0.2);
 }
-
 .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
@@ -1504,10 +1509,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     cursor: pointer;
 }
 
-.nav-spacer {
-    height: 64px;
+.nav-logo,
+.nav-menu a,
+.menu-toggle {
+    transition: color 0.4s ease;
 }
 
+.main-nav:not(.scrolled) .nav-logo,
+.main-nav:not(.scrolled) .nav-menu a,
+.main-nav:not(.scrolled) .menu-toggle {
+    color: #F7EDE2;
+}
+
+.main-nav:not(.scrolled) .nav-logo em {
+    color: #E8C9A8;
+}
+    
 @media (max-width: 820px) {
 
     .main-nav {
@@ -1723,5 +1740,15 @@ document.querySelectorAll("#navMenu a").forEach(function(link) {
     });
 });
 </script>
+const mainNav = document.querySelector('.main-nav');
+function updateNavOnScroll() {
+    if (window.scrollY > 40) {
+        mainNav.classList.add('scrolled');
+    } else {
+        mainNav.classList.remove('scrolled');
+    }
+}
+window.addEventListener('scroll', updateNavOnScroll);
+updateNavOnScroll();
 </body>
 </html>
