@@ -1075,7 +1075,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     >
         ☰
     </button>
-
+<div class="shipping-marquee">
+  <div class="shipping-marquee-track">
+    <span>Livraison offerte dès 20 € d’achat</span>
+    <span>Livraison offerte dès 20 € d’achat</span>
+    <span>Livraison offerte dès 20 € d’achat</span>
+    <span>Livraison offerte dès 20 € d’achat</span>
+    <span>Livraison offerte dès 20 € d’achat</span>
+    <span>Livraison offerte dès 20 € d’achat</span>
+  </div>
+</div>
+    
     <div class="nav-menu" id="navMenu">
         <a href="index.html">Accueil</a>
         <a href="index.html#produit">Beurre de mangue</a>
@@ -1637,6 +1647,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-style: italic;
     font-size: 17px;
     color: #003087;
+}
+.shipping-marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #6f6258;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.shipping-marquee-track {
+    display: inline-flex;
+    gap: 60px;
+    min-width: max-content;
+    animation: shipping-scroll 22s linear infinite;
+}
+
+@keyframes shipping-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
     
 </style>
