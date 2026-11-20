@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.5.0/default/snipcart.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://norkaya.fr/#organization",
+      "name": "Norkaya",
+      "url": "https://norkaya.fr/",
+      "description": "Boutique en ligne qui commercialise la marque propre Terra Kaya et distribue également des produits de marques partenaires indépendantes, dont Quesiah.",
+      "sameAs": [
+        "https://www.instagram.com/norkayaa/"
+      ]
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://norkaya.fr/#terra-kaya",
+      "name": "Terra Kaya"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://norkaya.fr/about.html#webpage",
+      "url": "https://norkaya.fr/about.html",
+      "name": "À propos de Norkaya et Terra Kaya",
+      "description": "Histoire de Norkaya et de Terra Kaya, sa marque propre de beurre de mangue artisanal fabriqué au Bénin.",
+      "isPartOf": {
+        "@id": "https://norkaya.fr/#website"
+      },
+      "about": [
+        {
+          "@id": "https://norkaya.fr/#organization"
+        },
+        {
+          "@id": "https://norkaya.fr/#terra-kaya"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://norkaya.fr/#website",
+      "url": "https://norkaya.fr/",
+      "name": "Norkaya",
+      "publisher": {
+        "@id": "https://norkaya.fr/#organization"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id=GTM-PH9DFBB4'+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PH9DFBB4');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>À propos — Norkaya · Terra Kaya</title>
+<meta name="description" content="Découvrez Norkaya, boutique de soins naturels, et Terra Kaya, sa marque propre de beurre de mangue artisanal fabriqué au Bénin.">
+<meta name="keywords" content="beurre de mangue, beurre de mangue artisanal, beurre de mangue naturel, Terra Kaya, Norkaya, soin naturel, cosmétique naturelle, Bénin, peau sèche, cheveux secs, cheveux bouclés, cheveux frisés, cheveux crépus">
+<link rel="canonical" href="https://norkaya.fr/about.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-cream:#F7EDE2;
+    --bg-dark:#2B1810;
+    --text-dark:#2B1810;
+    --text-light:#F7EDE2;
+    --accent:#C4956A;
+    --white:#FDFAF6;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family:'Jost', sans-serif;
+    background:var(--white);
+    color:var(--text-dark);
+}
+
+nav {
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(253,250,246,0.95);
+    border-bottom:1px solid rgba(196,149,106,0.2);
+    padding:0 40px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.nav-logo {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.4rem;
+    color:var(--text-dark);
+    text-decoration:none;
+    letter-spacing:2px;
+}
+
+.nav-logo em { color:var(--accent); }
+
+.nav-links {
+    display:flex;
+    gap:32px;
+}
+
+.nav-links a {
+    font-size:0.75rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--text-dark);
+    text-decoration:none;
+}
+
+.nav-links a.active { color:var(--accent); }
+
+.hero {
+    margin-top:64px;
+    background:var(--bg-dark);
+    padding:100px 40px;
+    text-align:center;
+}
+
+.hero-eyebrow,
+.section-eyebrow {
+    font-size:0.7rem;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:18px;
+}
+
+.hero-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(2.5rem,6vw,4rem);
+    font-weight:300;
+    color:var(--text-light);
+    line-height:1.1;
+    margin-bottom:24px;
+}
+
+.hero-title em,
+.section-title em {
+    font-style:italic;
+    color:var(--accent);
+}
+
+.hero-sub {
+    max-width:620px;
+    margin:0 auto;
+    color:rgba(247,237,226,0.75);
+    font-size:1rem;
+    line-height:1.8;
+    font-weight:300;
+}
+
+.section {
+    padding:80px 40px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.section-alt {
+    background:var(--bg-cream);
+    padding:80px 40px;
+}
+
+.section-alt-inner {
+    max-width:900px;
+    margin:0 auto;
+}
+
+.section-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.2rem;
+    font-weight:400;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.section-divider {
+    width:48px;
+    height:1px;
+    background:linear-gradient(90deg,var(--accent),transparent);
+    margin-bottom:28px;
+}
+
+.section-text {
+    font-size:0.95rem;
+    line-height:1.9;
+    color:#5A4030;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.about-photo {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin:60px auto;
+}
+
+.about-photo img {
+    width:100%;
+    max-width:420px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.12);
+}
+
+.photo-caption {
+    font-size:1rem;
+    line-height:1.9;
+    color:#6B5B50;
+    font-style:italic;
+    text-align:left;
+}
+
+.lien-section {
+    background:var(--bg-dark);
+    padding:80px 40px;
+    text-align:center;
+}
+
+.lien-inner {
+    max-width:720px;
+    margin:0 auto;
+}
+
+.lien-flags {
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.lien-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    font-weight:300;
+    color:var(--text-light);
+    margin-bottom:24px;
+}
+
+.lien-title em { color:var(--accent); }
+
+.lien-text {
+    color:rgba(247,237,226,0.75);
+    font-size:0.95rem;
+    line-height:1.9;
+    font-weight:300;
+}
+
+.valeurs-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:40px;
+}
+
+.valeur-card {
+    background:var(--white);
+    padding:28px;
+    border-radius:8px;
+    border-left:3px solid var(--accent);
+}
+
+.valeur-icon {
+    font-size:1.8rem;
+    margin-bottom:12px;
+}
+
+.valeur-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.2rem;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.valeur-text {
+    font-size:0.85rem;
+    line-height:1.7;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.mango-box {
+    background:#FFF8F1;
+    border:1px solid rgba(196,149,106,0.25);
+    border-radius:14px;
+    padding:40px;
+    text-align:center;
+    margin:60px auto 0;
+}
+
+.mango-box img {
+    width:160px;
+    max-width:100%;
+    margin:0 auto 20px;
+    display:block;
+}
+
+.mango-box h3 {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.9rem;
+    margin-bottom:15px;
+}
+
+.mango-box p {
+    max-width:620px;
+    margin:0 auto;
+    line-height:1.8;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.cta-section {
+    padding:80px 40px;
+    text-align:center;
+    background:var(--bg-cream);
+}
+
+.cta-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:16px;
+}
+
+.cta-title em { color:var(--accent); }
+
+.cta-text {
+    max-width:520px;
+    margin:0 auto 32px;
+    line-height:1.8;
+    color:#6B5B50;
+    font-weight:300;
+}
+
+.cta-btn {
+    display:inline-block;
+    background:var(--bg-dark);
+    color:var(--text-light);
+    padding:16px 40px;
+    text-decoration:none;
+    font-size:0.8rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    border-radius:4px;
+}
+
+footer {
+    background:var(--bg-dark);
+    padding:40px;
+    text-align:center;
+}
+
+.footer-logo {
+    font-family:'Cormorant Garamond', serif;
+    color:var(--text-light);
+    font-size:1.2rem;
+    letter-spacing:3px;
+    margin-bottom:16px;
+}
+
+.footer-links {
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    margin-bottom:16px;
+}
+
+.footer-links a {
+    color:rgba(247,237,226,0.55);
+    text-decoration:none;
+    font-size:0.7rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.footer-copy {
+    color:rgba(247,237,226,0.3);
+    font-size:0.7rem;
+}
+
+
+.footer-columns {
+    max-width: 960px;
+    margin: 32px auto 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: left;
+}
+
+.footer-col-title {
+    color: var(--accent);
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    display: block;
+    color: rgba(247,237,226,0.58);
+    text-decoration: none;
+    font-size: 0.76rem;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.footer-col a:hover { color: var(--accent); }
+
+@media(max-width:768px) {
+    .footer-columns { grid-template-columns: 1fr 1fr; text-align: center; }
+}
+
+@media(max-width:520px) {
+    .nav-links { overflow-x:auto; max-width: 68vw; padding-bottom: 4px; }
+    .footer-columns { grid-template-columns: 1fr; }
+}
+
+@media(max-width:768px) {
+    nav { padding:0 20px; }
+    .nav-links { gap:14px; }
+
+    .section,
+    .section-alt,
+    .lien-section,
+    .cta-section {
+        padding:60px 20px;
+    }
+
+    .about-photo {
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:22px;
+    }
+
+    .about-photo img {
+        max-width:100%;
+    }
+
+    .photo-caption {
+        text-align:center;
+        font-size:0.92rem;
+    }
+
+    .valeurs-grid {
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<script>
+window.SnipcartSettings = {
+  publicApiKey: "M2YzOThkMTktNDM0Zi00YTM0LWJjNTEtMzczYzIyNGFjMWY1NjM5MTk3MTE1MzkxOTEyMzY0"
+};
+</script>
+
+<script async src="https://cdn.snipcart.com/themes/v3.5.0/default/snipcart.js"></script>
+
+<div hidden id="snipcart"></div>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+...
+</noscript>
+
+<nav>
+...
+</nav>
+<nav>
+  <a href="index.html" class="nav-logo">
+    Terra <em>Kaya</em>
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#produit">Beurre de mangue</a>
+    <a href="quesiah.html">Savons Koto</a>
+    <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
+    <a href="about.html" class="active">À propos</a>
+
+    <a href="#" class="snipcart-checkout" style="text-decoration:none;color:inherit;">
+      🛒 <span class="snipcart-items-count">0</span>
+    </a>
+  </div>
+</nav>
+<div class="hero">
+    <div class="hero-eyebrow">Notre histoire</div>
+    <h1 class="hero-title">Un projet né<br><em>du cœur</em></h1>
+    <p class="hero-sub">
+        Norkaya, c'est l'histoire d'un lien profond entre deux cultures,
+        deux continents et une passion pour les trésors naturels du Bénin.
+    </p>
+</div>
+
+<div class="section">
+    <div class="section-eyebrow">Nos origines</div>
+    <h2 class="section-title">Pourquoi j'ai lancé<br><em>ce projet</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="section-text">
+        Norkaya est la boutique qui commercialise les produits. Terra Kaya est sa marque propre,
+        dédiée notamment au beurre de mangue artisanal fabriqué au Bénin. Norkaya distribue
+        également des produits de marques partenaires indépendantes, comme les savons Koto de Quesiah.
+    </p>
+
+    <p class="section-text">
+        Terra Kaya est née d'un ancrage profond, intime et familial.
+        Le Bénin est le pays d'origine de mon fils et de mon compagnon —
+        un pays qui est devenu au fil du temps mon pays adoptif.
+        Il fait partie de nous, de notre quotidien et de notre histoire.
+    </p>
+
+    <p class="section-text">
+        J'ai eu envie de célébrer ces cultures, de mettre en lumière nos
+        histoires et nos savoir-faire, et de permettre aux personnes
+        afro-descendantes d'avoir accès à des produits de chez elles,
+        fabriqués avec respect, authenticité et exigence.
+    </p>
+
+    <p class="section-text">
+        À travers Terra Kaya, je souhaite aussi faire découvrir un trésor
+        encore trop peu connu en France : le beurre de mangue artisanal du Bénin,
+        un soin naturel apprécié pour nourrir la peau sèche et prendre soin des
+        cheveux secs, bouclés, frisés ou crépus.
+    </p>
+
+    <div class="about-photo">
+        <img src="sothe.PNG"
+             alt="Fondatrice de Terra Kaya et son fils, marque de beurre de mangue artisanal du Bénin">
+        <p class="photo-caption">
+            Terra Kaya est aussi une histoire de transmission. À travers cette marque,
+            je souhaite transmettre à mon fils l'importance de nos racines, de notre
+            histoire et des savoir-faire qui nous relient.
+        </p>
+    </div>
+</div>
+
+<div class="lien-section">
+    <div class="lien-inner">
+        <div class="section-eyebrow">Deux cultures, un lien</div>
+        <div class="lien-flags">🇲🇶 🤝 🇧🇯</div>
+        <h2 class="lien-title">Martinique <em>&</em> Bénin</h2>
+        <p class="lien-text">
+            Il existe un lien puissant entre la Martinique et le Bénin, hérité
+            de notre histoire commune, des échanges culturels, spirituels et
+            économiques qui renaissent aujourd'hui. Norkaya s'inscrit dans cette
+            dynamique de transmission, de fierté et de valorisation des richesses
+            naturelles africaines.
+        </p>
+    </div>
+</div>
+
+<div class="section-alt">
+    <div class="section-alt-inner">
+        <div class="section-eyebrow">Ce qui nous définit</div>
+        <h2 class="section-title">Nos <em>engagements</em></h2>
+        <div class="section-divider"></div>
+
+        <div class="valeurs-grid">
+            <div class="valeur-card">
+                <div class="valeur-icon">👩🏾‍🌾</div>
+                <div class="valeur-title">Artisanat féminin</div>
+                <p class="valeur-text">
+                    Nous travaillons avec une productrice béninoise au nord du Bénin,
+                    qui fabrique à la main selon des techniques traditionnelles.
+                </p>
+            </div>
+
+            <div class="valeur-card">
+                <div class="valeur-icon">🌍</div>
+                <div class="valeur-title">Impact local</div>
+                <p class="valeur-text">
+                    Chaque pot acheté soutient une filière artisanale locale
+                    et participe à la valorisation des ressources du Bénin.
+                </p>
+            </div>
+
+            <div class="valeur-card">
+                <div class="valeur-icon">🌱</div>
+                <div class="valeur-title">Soin naturel</div>
+                <p class="valeur-text">
+                    Notre beurre de mangue est un soin naturel, simple et polyvalent,
+                    pensé pour la peau, le corps et les cheveux.
+                </p>
+            </div>
+
+            <div class="valeur-card">
+                <div class="valeur-icon">🤝</div>
+                <div class="valeur-title">Commerce responsable</div>
+                <p class="valeur-text">
+                    Nous privilégions une relation directe, respectueuse et équitable
+                    avec les personnes qui participent à la production.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-eyebrow">Notre produit phare</div>
+    <h2 class="section-title">Pourquoi le beurre<br><em>de mangue du Bénin ?</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="section-text">
+        Le beurre de mangue Terra Kaya est fabriqué à partir du noyau de la mangue,
+        selon un savoir-faire traditionnel. Naturellement riche et nourrissant,
+        il est apprécié pour prendre soin des peaux sèches, sensibles, ainsi que
+        des cheveux secs, bouclés, frisés ou crépus.
+    </p>
+
+    <p class="section-text">
+        Ce beurre de mangue artisanal incarne tout ce que nous souhaitons transmettre :
+        un produit naturel, une histoire humaine forte, une origine précieuse et un
+        soin authentique inspiré des richesses du Bénin.
+    </p>
+
+    <div class="about-photo">
+        <img src="pot.png"
+             alt="Pot de beurre de mangue artisanal Terra Kaya, soin naturel pour la peau et les cheveux">
+        <p class="photo-caption">
+            Le beurre de mangue Terra Kaya est un soin naturel polyvalent qui nourrit,
+            protège et sublime la peau et les cheveux.
+        </p>
+    </div>
+
+    <div class="mango-box">
+        <img src="mangue.png"
+             alt="Mango, la mascotte Terra Kaya">
+
+        <h3>Fais connaissance avec Mango</h3>
+
+        <p>
+            Mango est la petite mascotte de Terra Kaya. Curieuse, joyeuse et toujours
+            prête à partager ses découvertes, elle t'accompagne pour explorer les
+            secrets du beurre de mangue et ses nombreux bienfaits pour la peau et les cheveux.
+        </p>
+
+        <p style="margin-top:20px;color:#C4956A;font-style:italic;font-weight:500;">
+            « Le beurre de mangue n'aura bientôt plus aucun secret pour toi ! »
+        </p>
+
+        <p style="margin-top:15px;font-size:0.9rem;color:#6B5B50;">
+            📱 Retrouve Mango sur TikTok :
+            <strong>@norkaya1</strong>
+        </p>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h2 class="cta-title">Rejoins l'aventure<br><em>Terra Kaya</em></h2>
+    <p class="cta-text">
+        Le beurre de mangue Terra Kaya est disponible à la commande en ligne. Retrouvez notre produit phare et complétez votre routine naturelle.
+    </p>
+    <a href="https://buy.stripe.com/5kQ9ANca91oL68Y3xp1wY06" target="_blank" rel="noopener" class="cta-btn">Acheter le beurre de mangue 🥭</a>
+</div>
+
+<footer>
+    <div class="footer-logo">Terra Kaya · by Norkaya</div>
+
+    <div class="footer-columns">
+        <div class="footer-col">
+            <div class="footer-col-title">Boutique</div>
+            <a href="index.html#produit">Beurre de mangue</a>
+            <a href="quesiah.html">Savons Koto</a>
+            <a href="bienfaits-beurre-mangue.html">Bienfaits</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Norkaya</div>
+            <a href="about.html">À propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Commandes</div>
+            <a href="livraison-points-de-vente.html">Livraison & Points de vente</a>
+            <a href="retours-remboursements.html">Retours & remboursements</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-col-title">Légal</div>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="cgv.html">CGV</a>
+            <a href="confidentialite.html">Confidentialité</a>
+        </div>
+    </div>
+
+    <div class="footer-copy">© 2026 Norkaya — Terra Kaya · Tous droits réservés</div>
+</footer>
+
+</body>
+</html>
